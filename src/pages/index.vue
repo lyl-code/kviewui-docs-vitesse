@@ -12,7 +12,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>
+  <div class="py-20 hidden">
     <div text-4xl>
       <div i-carbon-campsite inline-block />
     </div>

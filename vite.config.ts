@@ -22,6 +22,14 @@ export default defineConfig({
     },
   },
 
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "~/styles/globalVar.scss";',
+      },
+    },
+  },
+
   plugins: [
     Preview(),
 
@@ -74,6 +82,9 @@ export default defineConfig({
     Markdown({
       wrapperClasses: 'prose prose-sm m-auto text-left',
       headEnabled: true,
+      markdownItOptions: {
+        html: true,
+      },
       markdownItSetup(md) {
         // https://prismjs.com/
         md.use(Shiki, {
@@ -91,6 +102,11 @@ export default defineConfig({
         })
       },
     }),
+
+    // naiveUIMD({
+    //   hljs,
+    //   wrapCodeWithCard: false,
+    // }),
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({

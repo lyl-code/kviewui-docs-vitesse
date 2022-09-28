@@ -1,10 +1,14 @@
 button:
   about: 关于
   back: 返回
+  components: 组件
   go: 确定
   home: 首页
+  guide: 指南
   toggle_dark: 切换深色模式
   toggle_langs: 切换语言
+  tools: 工具
+  templates: 模板
 intro:
   desc: 固执己见的 Vite 项目模板
   dynamic-route: 动态路由演示

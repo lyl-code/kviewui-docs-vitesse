@@ -1,14 +1,18 @@
 button:
   about: About
   back: Back
+  components: Components
   go: GO
+  guide: Guide
   home: Home
+  templates: Templates
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+  tools: Tools
 intro:
+  aka: Also known as
   desc: Opinionated Vite Starter Template
   dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
-  aka: Also known as
   whats-your-name: What's your name?
 not-found: Not found
