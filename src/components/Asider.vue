@@ -17,7 +17,7 @@ watch(() => route.path, (newPath, oldPath) => {
 </script>
 
 <template>
-  <div class="leading-10 w-200 px-5">
+  <div class="leading-10 w-200 px-5 !hidden">
     <template v-if="pathname.includes('component')">
       <ol v-for="(item, index) in menuList.component" :key="index" class="">
         <RouterLink v-if="item.link" :to="item.link">

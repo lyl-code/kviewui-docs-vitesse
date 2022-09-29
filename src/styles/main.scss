@@ -14,15 +14,6 @@ body,
   transition: background .5s;
 }
 
-* {
-
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px !important;
-    // background-color: gray !important;
-  }
-}
-
 html.dark {
   background: map-get($map: $code-colors, $key: c-dark-bg);
   color-scheme: dark;
