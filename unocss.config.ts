@@ -7,6 +7,7 @@ import {
   presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
+  presetWind,
 } from 'unocss'
 
 import { presetScrollbar } from 'unocss-preset-scrollbar'
@@ -33,6 +34,7 @@ export default defineConfig({
       },
     }),
     presetScrollbar(),
+    presetWind(),
     presetFlowbite(),
   ],
   transformers: [
