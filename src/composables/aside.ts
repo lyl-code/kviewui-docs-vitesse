@@ -13,7 +13,7 @@ export const menus = () => {
             show: true,
             describe: '按钮用于触发一个操作，如提交表单。',
             author: 'kviewui@163.com',
-            link: '/component/button',
+            link: '/components/button',
           },
           {
             name: 'Cell 单元格',
@@ -22,7 +22,7 @@ export const menus = () => {
             show: true,
             describe: '列表项，可组成列表。',
             author: 'kviewui@163.com',
-            link: '/component/cell',
+            link: '/components/cell',
           },
           {
             name: 'Image 图片',
@@ -31,7 +31,7 @@ export const menus = () => {
             show: true,
             describe: '增强版的 img 标签，提供多种图片填充模式，支持图片加载中提示、加载失败提示。',
             author: 'kviewui@163.com',
-            link: '/component/image',
+            link: '/components/image',
           },
           {
             name: 'Icon 图标',
@@ -40,7 +40,7 @@ export const menus = () => {
             show: true,
             describe: '可支持多种 字体图标平台的图标集，可以通过 Icon 组件使用。',
             author: 'kviewui@163.com',
-            link: '/component/icon',
+            link: '/components/icon',
           },
           {
             name: 'Tag 标签',
@@ -49,7 +49,7 @@ export const menus = () => {
             show: true,
             describe: '用于标记关键词和主要内容。',
             author: 'kviewui@163.com',
-            link: '/component/tag',
+            link: '/components/tag',
           },
           {
             name: 'Badge 徽标',
@@ -58,7 +58,7 @@ export const menus = () => {
             show: true,
             describe: '展示图标或文字右上角的红色圆点、数字或者文字，表示有新内容或新消息待处理。',
             author: 'kviewui@163.com',
-            link: '/component/badge',
+            link: '/components/badge',
           },
         ],
       },
@@ -74,7 +74,7 @@ export const menus = () => {
             show: true,
             describe: 'Layout 提供了 kui-row 和 kui-col 两个辅助布局的组件，帮助您高效率的进行页面布局。',
             author: 'kviewui@163.com',
-            link: '/component/layout',
+            link: '/components/layout',
           },
           {
             name: 'Grid 宫格',
@@ -83,7 +83,7 @@ export const menus = () => {
             show: true,
             describe: '将页面区域分隔成等宽区块。',
             author: 'kviewui@163.com',
-            link: '/component/grid',
+            link: '/components/grid',
           },
           {
             name: 'Divider 分割线',
@@ -92,7 +92,7 @@ export const menus = () => {
             show: true,
             describe: '用于将内容分隔为多个区域。',
             author: 'kviewui@163.com',
-            link: '/component/divider',
+            link: '/components/divider',
           },
           {
             name: 'Space 间隔',
@@ -101,7 +101,7 @@ export const menus = () => {
             show: true,
             describe: '在 kui-space 组件包裹下可以给行或者列增加内间距。',
             author: 'kviewui@163.com',
-            link: '/component/space',
+            link: '/components/space',
           },
           {
             name: 'Sticky 粘性布局',
@@ -110,7 +110,7 @@ export const menus = () => {
             show: true,
             describe: 'Sticky组件基于CSS中的 position: sticky 属性实现的效果，当组件在屏幕或者指定容器范围内时，按照正常的布局排列，当组件超出屏幕或者指定容器范围时，始终固定在屏幕或者指定容器顶部。',
             author: 'kviewui@163.com',
-            link: '/component/sticky',
+            link: '/components/sticky',
           },
         ],
       },
@@ -126,7 +126,7 @@ export const menus = () => {
             show: true,
             describe: 'Spin 组件提供了 15 种常见的CSS3加载场景动画，基本满足各种常见的等待加载场景需求。',
             author: 'kviewui@163.com',
-            link: '/component/spin',
+            link: '/components/spin',
           },
           {
             name: 'Overlay 遮罩',
@@ -135,7 +135,7 @@ export const menus = () => {
             show: true,
             describe: '创建一个遮罩层，用来强调特定的元素，防止用户进行其他操作。',
             author: 'kviewui@163.com',
-            link: '/component/overlay',
+            link: '/components/overlay',
           },
           {
             name: 'Animation 动效',
@@ -144,7 +144,7 @@ export const menus = () => {
             show: true,
             describe: '给元素添加常用的动画效果，Animation 基于 animista 总结而来，目前支持 10+ 种主轴动画形式。',
             author: 'kviewui@163.com',
-            link: '/component/animation',
+            link: '/components/animation',
           },
           {
             name: 'Collapse 折叠面板',
@@ -153,7 +153,7 @@ export const menus = () => {
             show: true,
             describe: '将内容放置在多个折叠面板中，点击面板标题可展开或收缩内容。',
             author: 'kviewui@163.com',
-            link: '/component/collapse',
+            link: '/components/collapse',
           },
           {
             name: 'Skeleton 骨架屏',
@@ -162,7 +162,7 @@ export const menus = () => {
             show: true,
             describe: '在页面上待加载区域填充灰色的占位图，用来展示界面加载过程的过渡效果。组件提供了标题，段落，头像，卡片等场景骨架，具体可参考下面代码演示部分。',
             author: 'kviewui@163.com',
-            link: '/component/skeleton',
+            link: '/components/skeleton',
           },
           {
             name: 'Progress 进度条',
@@ -171,7 +171,7 @@ export const menus = () => {
             show: true,
             describe: '用来展示当前操作的进度。',
             author: 'kviewui@163.com',
-            link: '/component/progress',
+            link: '/components/progress',
           },
         ],
       },
@@ -187,7 +187,7 @@ export const menus = () => {
             show: true,
             describe: '弹出层容器，用来展示弹窗，提示信息等内容，支持多个弹出层叠加展示。',
             author: 'kviewui@163.com',
-            link: '/component/popup',
+            link: '/components/popup',
           },
           {
             name: 'Snackbar 消息条',
@@ -196,7 +196,7 @@ export const menus = () => {
             show: true,
             describe: '在页面顶部或者底部展示消息提示。',
             author: 'kviewui@163.com',
-            link: '/component/snackbar',
+            link: '/components/snackbar',
           },
           {
             name: 'ActionSheet 动作面板',
@@ -205,7 +205,7 @@ export const menus = () => {
             show: true,
             describe: '从底部弹出一个动作面板供用户选择选项。',
             author: 'kviewui@163.com',
-            link: '/component/actionsheet',
+            link: '/components/actionsheet',
           },
         ],
       },

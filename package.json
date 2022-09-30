@@ -51,6 +51,7 @@
     "taze": "^0.8.2",
     "typescript": "^4.8.3",
     "unocss": "^0.45.25",
+    "unocss-preset-extra": "^0.4.3",
     "unocss-preset-scrollbar": "^0.2.1",
     "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.7",
@@ -64,6 +65,7 @@
     "vite-ssg": "^0.20.2",
     "vite-ssg-sitemap": "^0.4.3",
     "vitest": "^0.23.4",
+    "vue-qr": "^4.0.9",
     "vue-tsc": "^0.40.13"
   }
 }

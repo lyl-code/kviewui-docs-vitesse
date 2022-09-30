@@ -5,13 +5,14 @@ import {
   presetTypography,
   presetUno,
   presetWebFonts,
+  presetWind,
   transformerDirectives,
   transformerVariantGroup,
-  presetWind,
 } from 'unocss'
 
 import { presetScrollbar } from 'unocss-preset-scrollbar'
 import { presetFlowbite } from '@julr/unocss-preset-flowbite'
+import { presetExtra } from 'unocss-preset-extra'
 
 export default defineConfig({
   shortcuts: [
@@ -19,7 +20,13 @@ export default defineConfig({
     ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600'],
   ],
   presets: [
-    presetUno(),
+    presetUno({
+      theme: {
+        breakpoints: {
+          '3xl': '1680px',
+        },
+      },
+    }),
     presetAttributify(),
     presetIcons({
       scale: 1.2,
@@ -36,6 +43,7 @@ export default defineConfig({
     presetScrollbar(),
     presetWind(),
     presetFlowbite(),
+    presetExtra(),
   ],
   transformers: [
     transformerDirectives(),
