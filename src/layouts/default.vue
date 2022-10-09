@@ -27,13 +27,13 @@ watch(() => route.path, (newPath, oldPath) => {
       <!-- <main class="pt-0 pl-30 text-center text-gray-700 dark:text-gray-200 !h-screen">
       <RouterView class="lg:max-w-280" />
     </main> -->
-      <RouterView class="lg:max-w-280 !h-screen !overflow-auto box-border px-10 pb-176px prose" />
+      <RouterView class="lg:max-w-280 !h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 box-border px-10 pb-176px prose" />
     </div>
     <!-- <div class="color-black flex items-center">
       [Default Layout]
     </div> -->
     <div v-show="isComponentRoute" class="pr-0">
-      <Simulator class="mt-100px" />
+      <Simulator class="mt-100px !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50" />
     </div>
   </div>
 </template>
