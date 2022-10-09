@@ -98,7 +98,7 @@ const toggleLocales = () => {
   <nav
     class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
   >
-    <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <div class="container flex flex-wrap1 justify-between items-center mx-auto">
       <RouterLink class="flex items-center hover:opacity-80" to="/" :title="t('button.home')">
         <img class="h-12 mr-2" src="/kviewui.png" alt="">
         <div class="dark:color-white color-black text-2xl !tracking-wider !font-sans opacity-80 dark:opacity-100 relative right-2 top-2">
@@ -106,7 +106,7 @@ const toggleLocales = () => {
           <span>UI</span>
         </div>
       </RouterLink>
-      <div class="flex items-center md:order-2">
+      <div class="flex items-center1 md:order-2 hidden">
         <a
           class="icon-btn ml-10" rel="noreferrer" href="https://github.com/lyl-code/kviewui-docs-vitesse"
           target="_blank" title="GitHub"
@@ -140,7 +140,7 @@ const toggleLocales = () => {
           </svg>
         </button>
       </div>
-      <div id="navbar-sticky" class="hidden justify-between lg:!pl-200 items-center w-full md:flex md:w-auto md:order-1">
+      <div id="navbar-sticky" class="hidden justify-between lg:!pl-160 items-center w-full md:flex md:w-auto md:order-1">
         <RouterLink class="icon-btn mx-3" to="/guide/intro" :title="t('button.guide')">
           <div class="color-gray-600 dark:!color-gray" :class="isGuideRoute ? 'dark:!color-white !color-black' : ''">
             {{ t('button.guide') }}

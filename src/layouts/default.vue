@@ -20,18 +20,18 @@ watch(() => route.path, (newPath, oldPath) => {
       class="container !max-w-screen-2xl lg:px-6 !mx-auto grid-leyout !scrollbar !scrollbar-rounded !scrollbar-w-4px flex justify-between relative top-88px box-border"
     >
       <aside
-        class="sidebar fixed1 z-50 lg:z-0 lg:z-static h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50"
+        class="sidebar min-w-200px pb-160px fixed1 z-50 lg:z-0 h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50"
       >
         <Asider />
       </aside>
       <!-- <main class="pt-0 pl-30 text-center text-gray-700 dark:text-gray-200 !h-screen">
       <RouterView class="lg:max-w-280" />
     </main> -->
-      <RouterView class="lg:max-w-280 !h-screen !overflow-auto box-border px-10 pb-176px" />
+      <RouterView class="lg:max-w-280 !h-screen !overflow-auto box-border px-10 pb-176px prose" />
     </div>
-    <div class="color-black">
+    <!-- <div class="color-black flex items-center">
       [Default Layout]
-    </div>
+    </div> -->
     <div v-show="isComponentRoute" class="pr-0">
       <Simulator class="mt-100px" />
     </div>

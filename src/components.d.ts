@@ -9,7 +9,6 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Asider: typeof import('./components/Asider.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
-    Demo: typeof import('./components/Demo.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     README: typeof import('./components/README.md')['default']
