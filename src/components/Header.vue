@@ -25,148 +25,152 @@ const toggleLocales = () => {
   const locales = availableLocales
   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
 }
+
+const showMore = ref(false);
+
+const toggleMore = (bool: boolean) => {
+  showMore.value = bool;
+}
 </script>
 
 <template>
   <nav
-    class="dark:bg-black bg-white !fixed !w-full px-160 flex justify-between items-center z-100 border-b !hidden"
-  >
-    <RouterLink class="flex items-center hover:opacity-80" to="/" :title="t('button.home')">
-      <img class="h-20 mr-0" src="/kviewui.png" alt="">
-      <div class="dark:color-white color-black text-2xl !tracking-wider !font-sans opacity-80 dark:opacity-100">
-        Kview UI1
-      </div>
-    </RouterLink>
-    <div class="flex">
-      <RouterLink class="icon-btn mx-3" to="/guide/intro" :title="t('button.guide')">
-        <div class="color-gray-600 dark:!color-gray" :class="isGuideRoute ? 'dark:!color-white !color-black' : ''">
-          {{ t('button.guide') }}
-        </div>
-      </RouterLink>
-
-      <RouterLink class="icon-btn mx-3" to="/components/button" :title="t('button.components')">
-        <div class="color-gray-600 dark:!color-gray" :class="isComponentRoute ? 'dark:!color-white !color-black' : ''">
-          {{ t('button.components') }}
-        </div>
-      </RouterLink>
-
-      <RouterLink class="icon-btn mx-3" to="/tools/intro" :title="t('button.tools')">
-        <div class="color-gray-600 dark:!color-gray" :class="isToolsRoute ? 'dark:!color-white !color-black' : ''">
-          {{ t('button.tools') }}
-        </div>
-      </RouterLink>
-
-      <RouterLink class="icon-btn mx-3" to="/template/intro" :title="t('button.templates')">
-        <div class="color-gray-600 dark:!color-gray" :class="isTemplateRoute ? 'dark:!color-white !color-black' : ''">
-          {{ t('button.templates') }}
-        </div>
-      </RouterLink>
-
-      <a
-        class="icon-btn ml-10" rel="noreferrer" href="https://github.com/lyl-code/kviewui-docs-vitesse" target="_blank"
-        title="GitHub"
-      >
-        <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-logo-github />
-      </a>
-
-      <button class="icon-btn mx-5 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
-        <div class="color-gray-600 dark:!color-gray text-xl color-gray" i="carbon-sun dark:carbon-moon" />
-      </button>
-
-      <a class="icon-btn ml-0" :title="t('button.toggle_langs')" @click="toggleLocales(availableLocales, locale)">
-        <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-language />
-      </a>
-
-      <!-- <button class="icon-btn mx-5 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
-        <div i="carbon-sun dark:carbon-moon" />
-      </button>
-
-      <a class="icon-btn mx-5" :title="t('button.toggle_langs')" @click="toggleLocales()">
-        <div i-carbon-language />
-      </a>
-
-      <RouterLink class="icon-btn mx-5" to="/about" :title="t('button.about')">
-        <div i-carbon-dicom-overlay />
-      </RouterLink>
-
-      <a class="icon-btn ml-5" rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank" title="GitHub">
-        <div i-carbon-logo-github />
-      </a> -->
-    </div>
-  </nav>
-
-  <nav
-    class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
-  >
-    <div class="container flex flex-wrap1 justify-between items-center mx-auto">
+    class="bg-white px-2 sm:px-4 py-2.5 dark:bg-black/1 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="lt-lg:container flex justify-between items-center mx-10 lt-lg:mx-1">
       <RouterLink class="flex items-center hover:opacity-80" to="/" :title="t('button.home')">
-        <img class="h-12 mr-2" src="/kviewui.png" alt="">
-        <div class="dark:color-white color-black text-2xl !tracking-wider !font-sans opacity-80 dark:opacity-100 relative right-2 top-2">
+        <img class="h-40px mr-2" src="/kviewui.png" alt="">
+        <div
+          class="dark:color-white color-black text-2xl !tracking-wider !font-sans opacity-80 dark:opacity-100 relative right-2 top-1 lt-md:!hidden">
           <span color-green-600>Kview</span>
           <span>UI</span>
         </div>
+        <div class="lt-sm:!hidden">
+          <span
+            class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900 !tracking-2px !font-serif">v1.0.0</span>
+        </div>
       </RouterLink>
-      <div class="flex items-center1 md:order-2 hidden">
-        <a
-          class="icon-btn ml-10" rel="noreferrer" href="https://github.com/lyl-code/kviewui-docs-vitesse"
-          target="_blank" title="GitHub"
-        >
-          <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-logo-github />
-        </a>
+      <div class="flex lt-lg:!hidden">
+        <div id="navbar-sticky" class="items-center w-full md:flex md:w-auto">
+          <RouterLink class="icon-btn mx-3" to="/guide/intro" :title="t('button.guide')">
+            <div class="color-gray-600 dark:!color-gray" :class="isGuideRoute ? 'dark:!color-white !color-black' : ''">
+              {{ t('button.guide') }}
+            </div>
+          </RouterLink>
 
-        <button class="icon-btn mx-5 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
-          <div class="color-gray-600 dark:!color-gray text-xl color-gray" i="carbon-sun dark:carbon-moon" />
-        </button>
+          <RouterLink class="icon-btn mx-3" to="/components/button" :title="t('button.components')">
+            <div class="color-gray-600 dark:!color-gray"
+              :class="isComponentRoute ? 'dark:!color-white !color-black' : ''">
+              {{ t('button.components') }}
+            </div>
+          </RouterLink>
 
-        <a class="icon-btn lg:mr-20" :title="t('button.toggle_langs')" @click="toggleLocales(availableLocales, locale)">
-          <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-language />
-        </a>
-        <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button> -->
-        <button
-          data-collapse-toggle="navbar-sticky" type="button"
-          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-sticky" aria-expanded="true"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <RouterLink class="icon-btn mx-3" to="/tools/intro" :title="t('button.tools')">
+            <div class="color-gray-600 dark:!color-gray" :class="isToolsRoute ? 'dark:!color-white !color-black' : ''">
+              {{ t('button.tools') }}
+            </div>
+          </RouterLink>
+
+          <RouterLink class="icon-btn mx-3" to="/template/intro" :title="t('button.templates')">
+            <div class="color-gray-600 dark:!color-gray"
+              :class="isTemplateRoute ? 'dark:!color-white !color-black' : ''">
+              {{ t('button.templates') }}
+            </div>
+          </RouterLink>
+        </div>
+        <div class="flex items-center hidden">
+          <a class="icon-btn ml-10" rel="noreferrer" href="https://github.com/lyl-code/kviewui-docs-vitesse"
+            target="_blank" title="GitHub">
+            <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-logo-github />
+          </a>
+
+          <button class="icon-btn mx-5 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
+            <div class="color-gray-600 dark:!color-gray text-xl color-gray" i="carbon-sun dark:carbon-moon" />
+          </button>
+
+          <a class="icon-btn lg:mr-20" :title="t('button.toggle_langs')"
+            @click="toggleLocales(availableLocales, locale)">
+            <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-language />
+          </a>
+        </div>
+      </div>
+      <div class="lg:!hidden">
+        <button v-if="!showMore" @click="toggleMore(true)"
+          class="icon-btn animated color-gray-600 dark:color-gray hover:!color-black dark:hover:!color-gray !outline-none lg:!hidden"
+          :class="!showMore ? 'animated-fade-in' : 'animated-fade-out'">
+          <svg width="24" height="24" fill="none" aria-hidden="true">
             <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            />
+              d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <button v-if="showMore"
+          @click="toggleMore(false)"
+          class="icon-btn animated color-gray-600 dark:color-gray hover:!color-black dark:hover:!color-gray !outline-none"
+          :class="showMore ? 'animated-fade-in' : 'animated-fade-out'">
+          <svg viewBox="0 0 10 10" class="w-6 h-2.5 overflow-visible" aria-hidden="true">
+            <path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            </path>
           </svg>
         </button>
       </div>
-      <div id="navbar-sticky" class="hidden justify-between lg:!pl-160 items-center w-full md:flex md:w-auto md:order-1">
-        <RouterLink class="icon-btn mx-3" to="/guide/intro" :title="t('button.guide')">
-          <div class="color-gray-600 dark:!color-gray" :class="isGuideRoute ? 'dark:!color-white !color-black' : ''">
-            {{ t('button.guide') }}
-          </div>
-        </RouterLink>
 
-        <RouterLink class="icon-btn mx-3" to="/components/button" :title="t('button.components')">
-          <div
-            class="color-gray-600 dark:!color-gray"
-            :class="isComponentRoute ? 'dark:!color-white !color-black' : ''"
-          >
-            {{ t('button.components') }}
-          </div>
-        </RouterLink>
+    </div>
+    <div v-if="showMore" class="absolute h-screen w-screen top-61px z-99 bg-white dark:bg-gray-900 overflow-y-hidden transition duration-500">
+      <div class="flex w-full justify-center pt-6 animated animated-fade-in-down animated-duration-400">
+        <div class="flex flex-col w-288px">
+          <div id="navbar-sticky" class="flex flex-col items-start w-full">
+            <div class="border-b dark:border-b-gray w-full py-2.5">
+              <RouterLink class="icon-btn" to="/guide/intro" @click="toggleMore(false)" :title="t('button.guide')">
+                <div class="color-gray-600 dark:!color-gray font-normal"
+                  :class="isGuideRoute ? 'dark:!color-white !color-black' : ''">
+                  {{ t('button.guide') }}
+                </div>
+              </RouterLink>
+            </div>
 
-        <RouterLink class="icon-btn mx-3" to="/tools/intro" :title="t('button.tools')">
-          <div class="color-gray-600 dark:!color-gray" :class="isToolsRoute ? 'dark:!color-white !color-black' : ''">
-            {{ t('button.tools') }}
-          </div>
-        </RouterLink>
+            <div class="border-b dark:border-b-gray w-full py-2.5">
+              <RouterLink class="icon-btn" to="/components/button" @click="toggleMore(false)" :title="t('button.components')">
+                <div class="color-gray-600 dark:!color-gray font-normal"
+                  :class="isComponentRoute ? 'dark:!color-white !color-black' : ''">
+                  {{ t('button.components') }}
+                </div>
+              </RouterLink>
+            </div>
 
-        <RouterLink class="icon-btn mx-3" to="/template/intro" :title="t('button.templates')">
-          <div class="color-gray-600 dark:!color-gray" :class="isTemplateRoute ? 'dark:!color-white !color-black' : ''">
-            {{ t('button.templates') }}
+            <div class="border-b dark:border-b-gray w-full py-2.5">
+              <RouterLink class="icon-btn" to="/tools/intro" @click="toggleMore(false)" :title="t('button.tools')">
+                <div class="color-gray-600 dark:!color-gray font-normal"
+                  :class="isToolsRoute ? 'dark:!color-white !color-black' : ''">
+                  {{ t('button.tools') }}
+                </div>
+              </RouterLink>
+            </div>
+
+            <div class="border-b dark:border-b-gray w-full py-2.5">
+              <RouterLink class="icon-btn" to="/template/intro" @click="toggleMore(false)" :title="t('button.templates')">
+                <div class="color-gray-600 dark:!color-gray font-normal"
+                  :class="isTemplateRoute ? 'dark:!color-white !color-black' : ''">
+                  {{ t('button.templates') }}
+                </div>
+              </RouterLink>
+            </div>
+
+            <div class="w-full flex py-6 justify-center items-center hidden">
+              <a class="icon-btn" rel="noreferrer" href="https://github.com/lyl-code/kviewui-docs-vitesse"
+                target="_blank" title="GitHub">
+                <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-logo-github />
+              </a>
+
+              <button class="icon-btn mx-5 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
+                <div class="color-gray-600 dark:!color-gray text-xl color-gray" i="carbon-sun dark:carbon-moon" />
+              </button>
+
+              <a class="icon-btn" :title="t('button.toggle_langs')" @click="toggleLocales(availableLocales, locale)">
+                <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-language />
+              </a>
+            </div>
           </div>
-        </RouterLink>
+        </div>
       </div>
     </div>
   </nav>
