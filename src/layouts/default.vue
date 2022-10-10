@@ -84,7 +84,7 @@ const goTop = () => {
     class="h-screen w-screen fixed overflow-y-hidden z999 inset-0 aside-overlay animated"
     :class="asideAnimateBodyClass">
     <aside
-      class="sidebar bg-white min-w-200px py-30px pb-160px fixed z-50 lg:z-0 h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 animated animated-duration-500"
+      class="sidebar bg-white dark:bg-gray-900 min-w-200px py-30px pb-160px fixed z-50 lg:z-0 h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 animated animated-duration-500"
       :class="asideAnimateClass">
       <Asider />
     </aside>
