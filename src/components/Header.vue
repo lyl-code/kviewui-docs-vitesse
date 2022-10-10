@@ -97,20 +97,13 @@ const toggleMore = (bool: boolean) => {
         <button v-if="!showMore" @click="toggleMore(true)"
           class="icon-btn animated color-gray-600 dark:color-gray hover:!color-black dark:hover:!color-gray !outline-none lg:!hidden"
           :class="!showMore ? 'animated-fade-in' : 'animated-fade-out'">
-          <svg width="24" height="24" fill="none" aria-hidden="true">
-            <path
-              d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
-              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
+          <div class="text-xl" i="carbon-overflow-menu-vertical"></div>
         </button>
         <button v-if="showMore"
           @click="toggleMore(false)"
           class="icon-btn animated color-gray-600 dark:color-gray hover:!color-black dark:hover:!color-gray !outline-none"
           :class="showMore ? 'animated-fade-in' : 'animated-fade-out'">
-          <svg viewBox="0 0 10 10" class="w-6 h-2.5 overflow-visible" aria-hidden="true">
-            <path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            </path>
-          </svg>
+          <div class="text-xl" i="carbon-close"></div>
         </button>
       </div>
 

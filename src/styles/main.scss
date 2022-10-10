@@ -20,6 +20,11 @@ html.dark {
   transition: background .5s;
 }
 
+.aside-overlay {
+  background: map-get($map: $code-colors, $key: overlay-bg);
+  transition: background .5s;
+}
+
 #nprogress {
   pointer-events: none;
 }
