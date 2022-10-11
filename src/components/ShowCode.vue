@@ -25,37 +25,18 @@ const props = defineProps({
 const source = ref<string>()
 
 onMounted(async () => {
-  const isDev = import.meta.env.MODE === 'development'
-  if (isDev) {
-    const modules = import.meta.glob('../pages/components/**/*.vue', {
-      as: 'raw',
+  const modules = import.meta.glob('../pages/components/**/*.vue', {
+    as: 'raw',
+  })
+  /* @vite-ignore */
+  // const data: any = await import(/* @vite-ignore */ `../pages/components/examples/${props.showPath}.vue?raw`)
+  const data: any = modules[`../pages/components/examples/${props.showPath}.vue`]
+  await data().then((res: any) => {
+    source.value = res
+    nextTick(() => {
+      Prism.highlightAll()
     })
-    /* @vite-ignore */
-    // const data: any = await import(/* @vite-ignore */ `../pages/components/examples/${props.showPath}.vue?raw`)
-    const data: any = modules[`../pages/components/examples/${props.showPath}.vue`]
-    await data().then((res: any) => {
-      source.value = res
-      nextTick(() => {
-        Prism.highlightAll()
-      })
-    })
-    // sourceCode.value = data.default
-  }
-  else {
-    // source.value = await fetch(`/pages/components/examples/${props.showPath}.vue`).then(res => res.text())
-    const modules = import.meta.glob('../pages/components/**/*.vue', {
-      as: 'raw',
-    })
-    /* @vite-ignore */
-    // const data: any = await import(/* @vite-ignore */ `../pages/components/examples/${props.showPath}.vue?raw`)
-    const data: any = modules[`../pages/components/examples/${props.showPath}.vue`]
-    await data().then((res: any) => {
-      source.value = res
-      nextTick(() => {
-        Prism.highlightAll()
-      })
-    })
-  }
+  })
 })
 
 const isShow = ref<Boolean>(true)
