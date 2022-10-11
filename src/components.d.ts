@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Alert: typeof import('./components/Alert.vue')['default']
     Asider: typeof import('./components/Asider.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
@@ -14,6 +15,7 @@ declare module '@vue/runtime-core' {
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ShowCode: typeof import('./components/ShowCode.vue')['default']
     Simulator: typeof import('./components/Simulator.vue')['default']
   }
 }

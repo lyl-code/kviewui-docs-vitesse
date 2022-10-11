@@ -1,5 +1,4 @@
 <script setup lang="ts">
-console.log(22222)
 const route = useRoute()
 
 const pathname = window.location.pathname
@@ -10,10 +9,10 @@ watch(() => route.path, (newPath, oldPath) => {
   })
 }, { immediate: true })
 
-const showAside = ref(false);
+const showAside = ref(false)
 
-const asideAnimateClass = ref('animated-slide-in-left');
-const asideAnimateBodyClass = ref('animated-fade-in');
+const asideAnimateClass = ref('animated-slide-in-left')
+const asideAnimateBodyClass = ref('animated-fade-in')
 
 const hideAside = () => {
   asideAnimateClass.value = 'animated-slide-out-left'
@@ -25,19 +24,18 @@ const hideAside = () => {
   }, 500)
 }
 
-let timer: NodeJS.Timeout;
+let timer: NodeJS.Timeout
 
 const goTop = () => {
   // document.getElementById('content').scrollTop = 0
   timer = setInterval(() => {
-    let top = document.getElementById('content').scrollTop;
-    let speed = top / 4;
-    if (document.getElementById('content').scrollTop != 0) {
-      document.getElementById('content').scrollTop -= speed;
-    }
-    if (top == 0) {
-      clearInterval(timer);
-    }
+    const top = document.getElementById('content').scrollTop
+    const speed = top / 4
+    if (document.getElementById('content').scrollTop != 0)
+      document.getElementById('content').scrollTop -= speed
+
+    if (top == 0)
+      clearInterval(timer)
   }, 30)
 }
 </script>
@@ -59,10 +57,11 @@ const goTop = () => {
     </div>
 
     <div
-      class="container !max-w-screen-2xl lg:px-6 !mx-auto grid-leyout !scrollbar !scrollbar-rounded !scrollbar-w-4px flex justify-between relative top-60px lt-lg:top-120px box-border">
-
+      class="container !max-w-screen-2xl lg:px-6 !mx-auto grid-leyout !scrollbar !scrollbar-rounded !scrollbar-w-4px flex justify-between relative top-60px lt-lg:top-120px box-border"
+    >
       <aside
-        class="sidebar min-w-200px py-30px pb-160px fixed1 z-50 lg:z-0 h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 lt-lg:!hidden">
+        class="sidebar min-w-200px py-30px pb-160px fixed1 z-50 lg:z-0 h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 lt-lg:!hidden"
+      >
         <Asider />
       </aside>
       <!-- <main class="pt-0 pl-30 text-center text-gray-700 dark:text-gray-200 !h-screen">
@@ -70,22 +69,27 @@ const goTop = () => {
     </main> -->
       <RouterView
         id="content"
-        class="lg:max-w-280 !h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-0px !scrollbar-thumb-color-transparent box-border px-10 pt-30px pb-176px" />
+        class="lg:max-w-280 !h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-0px !scrollbar-thumb-color-transparent box-border px-10 pt-30px pb-176px"
+      />
     </div>
     <!-- <div class="color-black flex items-center">
       [Default Layout]
     </div> -->
-    <div v-show="isComponentRoute" class="pr-0 lt-lg:mt-60px">
+    <div v-show="isComponentRoute" class="pr-0 lt-lg:mt-0px flex items-center">
       <Simulator
-        class="mt-100px !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 lt-sm:!hidden" />
+        class=" lt-sm:!hidden"
+      />
     </div>
   </div>
-  <div v-if="showAside" @click="hideAside"
-    class="h-screen w-screen fixed overflow-y-hidden z999 inset-0 aside-overlay animated"
-    :class="asideAnimateBodyClass">
+  <div
+    v-if="showAside" class="h-screen w-screen fixed overflow-y-hidden z999 inset-0 aside-overlay animated"
+    :class="asideAnimateBodyClass"
+    @click="hideAside"
+  >
     <aside
       class="sidebar bg-white dark:bg-gray-900 min-w-200px py-30px pb-160px fixed z-50 lg:z-0 h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 animated animated-duration-500"
-      :class="asideAnimateClass">
+      :class="asideAnimateClass"
+    >
       <Asider />
     </aside>
   </div>

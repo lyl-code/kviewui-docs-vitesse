@@ -12,17 +12,7 @@
 
 按钮支持 `primary`、`info`、`warning`、`danger`、`success` 五种主题类型，默认为 ''。通过 `background-color` 属性可以设置按钮背景色，通过 `text-color` 属性可以设置按钮文字颜色。
 
-```vue
-<template>
-    <kui-button type="primary">主要按钮</kui-button>
-    <kui-button type="info">信息按钮</kui-button>
-    <kui-button>默认按钮</kui-button>
-    <kui-button type="success">成功按钮</kui-button>
-    <kui-button type="warning">警告按钮</kui-button>
-    <kui-button type="danger">危险按钮</kui-button>
-    <kui-button type="danger" background-color="orange" text-color="black">自定义按钮</kui-button>
-</template>
-```
+<show-code />
 
 ### 文本按钮
 
@@ -30,108 +20,55 @@
 通过 `text` 属性将按钮设置为外边框按钮，按钮的文字为按钮颜色，背景为白色。
 通过 `outline` 属性可以去掉按钮边框，此时按钮即可为纯文字按钮。
 
-```vue
-<template>
-    <kui-button type="primary" outline text>外边框按钮</kui-button>
-    <kui-button type="primary" text>纯文字按钮</kui-button>
-</template>
-```
+<show-code show-path="button/TextButton" />
 
 ### 禁用状态
 
 通过 `disabled` 属性来禁用按钮，禁用状态下按钮不可点击。
 
-```vue
-<template>
-    <kui-button type="info" disabled>禁用状态</kui-button>
-    <kui-button type="primary" outline text disabled>禁用状态</kui-button>
-    <kui-button type="danger" outline text disabled>禁用状态</kui-button>
-</template>
-```
+<show-code show-path="button/DisabledButton" />
 
 ### 按钮形状
 
 通过 `shape` 属性设置按钮形状，支持方形按钮，胶囊按钮和圆形按钮，默认为胶囊按钮。可通过 `radius` 属性自定义按钮圆角大小
 
-```vue
-<template>
-    <kui-button type="primary" shape="square">方形按钮</kui-button>
-    <kui-button type="warning" shape="capsule">胶囊按钮</kui-button>
-    <kui-button type="primary" shape="round">圆形按钮</kui-button>
-    <kui-button type="danger" shape="square" :radius="30">自定义圆角大小</kui-button>
-</template>
-```
+<show-code show-path="button/ShapeButton" />
+
 ### 加载状态
 
 通过 `loading` 属性设置按钮状态为加载中
 
-```vue
-<template>
-    <kui-button type="primary" loading></kui-button>
-    <kui-button type="info" loading>加载中...</kui-button>
-</template>
-```
+<show-code show-path="button/LoadingButton" />
 
 ### 图标按钮
 
 通过 `icon` 属性可设置图标按钮图标类型，图标类型可以参考图标组件的 `type` 属性值
 
-```vue
-<template>
-    <kui-button type="warning" outline text icon="thumbs-up"></kui-button>
-    <kui-button type="primary" icon="thumbs-o-up">点赞</kui-button>
-</template>
-```
+<show-code show-path="button/IconButton" />
 
 ### 按钮大小
 
 支持 `large`、`normal`、`small`、`mini` 四种大小，默认为 `normal`。
 
-```vue
-<template>
-    <kui-button type="primary" size="large">大号按钮</kui-button>
-    <kui-button type="primary">普通按钮</kui-button>
-    <kui-button type="primary" size="small">小型按钮</kui-button>
-    <kui-button type="primary" size="mini">迷你按钮</kui-button>
-</template>
-```
+<show-code show-path="button/SizeButton" />
 
 ### 块级元素
 
 按钮在默认情况下为行内块级元素，通过 `block` 属性可以将按钮的元素类型设置为块级元素，常用来实现通栏按钮。
 
-```vue
-<template>
-  <kui-button type="primary" size="normal" block>块级按钮</kui-button>
-</template>
-```
+<show-code show-path="button/BlockButton" />
 
 ### 按钮阴影
 
 通过 `shadow` 可以显示按钮阴影，通过 `shadow-size` 属性可以设置阴影大小，支持 `sm` `md` `lg` `xl` `2xl` 五种大小。
 
-```vue
-<template>
-    <kui-button type="primary" shadow shadow-size="lg">主要按钮</kui-button>
-    <kui-button type="info" shadow shadow-size="lg">信息按钮</kui-button>
-    <kui-button shadow shadow-size="lg">默认按钮</kui-button>
-    <kui-button type="success" shadow shadow-size="xl">成功按钮</kui-button>
-    <kui-button type="warning" shadow shadow-size="xl">警告按钮</kui-button>
-    <kui-button type="danger" shadow shadow-size="xl">危险按钮</kui-button>
-</template>
-```
+<show-code show-path="button/ShadowButton" />
 
 ### 自定义颜色
 
 通过 background-color 属性可以自定义按钮的背景色。通过 text-color 属性可以自定义按钮的文本颜色。通过 gradient 属性可以设置按钮主题色渐变，具体可参考主题色生成原理。
 
-```vue
-<template>
-    <kui-button background-color="#7232dd">单色按钮</kui-button>
-    <kui-button background-color="#7232dd" text>单色按钮</kui-button>
-    <kui-button background-color="warning" gradient>渐变色按钮</kui-button>
-</template>
-```
+<show-code show-path="button/CustomColorButton" />
 
 ## API
 

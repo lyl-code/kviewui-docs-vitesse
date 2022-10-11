@@ -14,6 +14,8 @@ import Inspect from 'vite-plugin-inspect'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
+import Raw from 'vite-plugin-raw'
+import presetIcons from '@unocss/preset-icons'
 
 export default defineConfig({
   resolve: {
@@ -75,7 +77,11 @@ export default defineConfig({
 
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
-    Unocss(),
+    Unocss({
+      presets: [
+        presetIcons({}),
+      ],
+    }),
 
     // https://github.com/antfu/vite-plugin-vue-markdown
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
@@ -84,6 +90,7 @@ export default defineConfig({
       headEnabled: true,
       markdownItOptions: {
         html: true,
+        typographer: true,
       },
       markdownItSetup(md) {
         // https://prismjs.com/

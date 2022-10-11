@@ -37,9 +37,9 @@ const showQr = ref(false)
 </script>
 
 <template>
-  <div class="absolute1 right-3rem w-375px h-667px bg-gray-100 rounded-xl shadow-lg flex-col !z1 overflow-y-hidden">
+  <div class="absolute1 relative right-3rem w-375px h-667px bg-gray-100 rounded-xl shadow-lg flex-col !z1 overflow-y-hidden">
     <iframe id="demo" ref="simulator" name="demo_simulator" class="w-full h-630px" :src="src" frameborder="0" />
-    <div class="absolute right-5 bottom-12 h-30 w-30 xl:w-25 xl:h-25 bg-white rounded-xl animated animated-slide-in-up flex items-center justify-center" v-if="showQr">
+    <div v-if="showQr" class="absolute right-5 bottom-12 h-30 w-30 xl:w-25 xl:h-25 bg-white rounded-xl animated animated-slide-in-up flex items-center justify-center">
       <!-- <vue-qr :text="src" logo-src="/qrcode.png" :logo-scale="0.3" /> -->
       <img src="/qrcode.png" class="rounded-xl h-30 w-30 xl:w-22 xl:h-22" alt="">
     </div>

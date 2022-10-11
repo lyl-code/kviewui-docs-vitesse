@@ -1,5 +1,12 @@
 @import './markdown.scss';
 
+// selection
+
+*::selection {
+  background: map-get($map: $code-colors, $key: green);
+  color: map-get($map: $code-colors, $key: light-gray);
+}
+
 a {
   color: map-get($map: $code-colors, $key: blue) !important;
   font-weight: 600 !important;
