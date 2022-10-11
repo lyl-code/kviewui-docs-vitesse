@@ -42,7 +42,19 @@ onMounted(async () => {
     // sourceCode.value = data.default
   }
   else {
-    source.value = await fetch(`/pages/components/examples/${props.showPath}.vue`).then(res => res.text())
+    // source.value = await fetch(`/pages/components/examples/${props.showPath}.vue`).then(res => res.text())
+    const modules = import.meta.glob('../pages/components/**/*.vue', {
+      as: 'raw',
+    })
+    /* @vite-ignore */
+    // const data: any = await import(/* @vite-ignore */ `../pages/components/examples/${props.showPath}.vue?raw`)
+    const data: any = modules[`../pages/components/examples/${props.showPath}.vue`]
+    await data().then((res: any) => {
+      source.value = res
+      nextTick(() => {
+        Prism.highlightAll()
+      })
+    })
   }
 })
 
