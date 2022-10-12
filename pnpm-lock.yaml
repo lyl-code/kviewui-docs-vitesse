@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.27.0
+  '@dcloudio/uni-app': 3.0.0-alpha-3000020210521001
   '@iconify-json/carbon': ^1.1.8
   '@intlify/vite-plugin-vue-i18n': ^6.0.2
   '@julr/unocss-preset-flowbite': ^0.0.1
@@ -67,6 +68,7 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': 0.27.0_z4bbprzjrhnsfa24uvmcbu7f5q
+  '@dcloudio/uni-app': 3.0.0-alpha-3000020210521001
   '@iconify-json/carbon': 1.1.8
   '@intlify/vite-plugin-vue-i18n': 6.0.3_vite@3.1.6+vue-i18n@9.2.2
   '@julr/unocss-preset-flowbite': 0.0.1_unocss@0.45.29
@@ -1407,6 +1409,10 @@ packages:
       lodash.once: 4.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@dcloudio/uni-app/3.0.0-alpha-3000020210521001:
+    resolution: {integrity: sha512-Knjp8TbOtJgwE/THx32YuidATTIZzmGktYUAzvACl497It6crOWpcyTp9j58Kw5n3HzMl7iB0FSuFtleRyL4hw==}
     dev: true
 
   /@esbuild/android-arm/0.15.10:
