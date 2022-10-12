@@ -10,7 +10,9 @@
 
 ## 代码演示
 
+::: tip
 以下代码演示中的 `kui-space` 为组件库的 <a href="/components/space">Space 间隔</a> 组件。
+:::
 
 ### 徽标类型
 

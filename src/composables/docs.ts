@@ -144,5 +144,42 @@ export const mdConfig = () => {
         'container-ts': 'sticky/ContainerTsSticky',
       },
     },
+    spin: {
+      linkCode: `${baseLink}/kui-spin`,
+      showPath: {
+        'base': 'spin/BaseSpin',
+        'theme': 'spin/ThemeSpin',
+        'background-color': 'spin/BackgroundColorSpin',
+        'size': 'spin/SizeSpin',
+      },
+    },
+    overlay: {
+      linkCode: `${baseLink}/kui-overlay`,
+      showPath: {
+        'base': 'overlay/BaseOverlay',
+        'overlay-ness': 'overlay/OverlayNessOverlay',
+        'content': 'overlay/ContentOverlay',
+        'vnode': 'overlay/VnodeOverlay',
+        'slot-default': 'overlay/SlotDefaultOverlay',
+        'blur': 'overlay/BlurOverlay',
+      },
+    },
+    animation: {
+      linkCode: `${baseLink}/kui-animation`,
+      showPath: {
+        'base': 'animation/BaseAnimation',
+        'duration': 'animation/DurationAnimation',
+        'duration-unit': 'animation/DurationUnitAnimation',
+        'timing-function': 'animation/TimingFunctionAnimation',
+        'delay': 'animation/DelayAnimation',
+        'delay-unit': 'animation/DelayUnitAnimation',
+        'interation-count': 'animation/InterationCountAnimation',
+        'infinite': 'animation/InfiniteAnimation',
+        'direction': 'animation/DirectionAnimation',
+        'fill-mode': 'animation/FillModeAnimation',
+        'runing': 'animation/RuningAnimation',
+        'demo': 'animation/DemoAnimation',
+      },
+    },
   }
 }
