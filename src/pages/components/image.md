@@ -12,137 +12,41 @@
 
 基础用法与原生 img 标签一致，可以设置 src、width、height、alt 等原生属性。
 
-```vue
-<template>
-    <kui-image src="https://www.kviewui.com/images/dog1.png"></kui-image>
-</template>
-```
+<show-code com-type="image" com-show-type="base" />
 
 ### 填充模式
 
 通过 mode 属性可以设置图片填充模式，等同于 uniapp 原生 image 组件的 mode 属性，可选值见下方表格。
 
-```vue
-<template>
-    <kui-image src="https://www.kviewui.com/images/dog1.png" mode="aspectFill"></kui-image>
-</template>
-```
+<show-code com-type="image" com-show-type="mode" />
 
 ### 设置圆角
 
 通过 radius 属性可以设置图片圆角大小，当宽高一致时将为圆形图片
 
-```vue
-<template>
-    <kui-image 
-        width="200rpx" 
-        height="200rpx" 
-        :radius="30"
-        src="https://www.kviewui.com/images/dog1.png" >
-    </kui-image>
-    <kui-image 
-        width="200rpx" 
-        height="200rpx" 
-        :radius="300"
-        src="https://www.kviewui.com/images/dog1.png" >
-    </kui-image>
-</template>
-```
+<show-code com-type="image" com-show-type="radius" />
 
 ### 加载失败
 
 通过 error 属性可以设置加载失败状态
 
-```vue
-<template>
-    <kui-image  
-        height="200rpx" 
-        :radius="30"
-        error
-        src="https://www.kviewui.com/images/dog1.png" >
-    </kui-image>
-</template>
-```
+<show-code com-type="image" com-show-type="error" />
 
 ### 点击事件
 
-```vue
-<template>
-    <kui-image 
-        width="440rpx" 
-        height="440rpx" 
-        :radius="30"
-        @click="onClick"
-        src="https://www.kviewui.com/images/dog1.png" >
-    </kui-image>
-</template>
-<script lang="ts">
-    export default {
-        setup() {
-            const onClick = () => {
-				uni.showToast({
-					title: '图片被点击'
-				});
-			}
-
-            return {
-                onClick
-            }
-        }
-    }
-</script>
-```
+<show-code com-type="image" com-show-type="click" />
 
 ### 图片预览
 
 可以通过 preview 属性开启点击图片预览功能
 
-```vue
-<template>
-    <kui-image 
-        width="440rpx" 
-        height="440rpx" 
-        :radius="30"
-        preview
-        @click="onClick"
-        src="https://www.kviewui.com/images/dog1.png" >
-    </kui-image>
-</template>
-<script lang="ts">
-    export default {
-        setup() {
-            const onClick = () => {
-				uni.showToast({
-					title: '图片被点击'
-				});
-			}
-
-            return {
-                onClick
-            }
-        }
-    }
-</script>
-```
+<show-code com-type="image" com-show-type="preview" />
 
 ### 懒加载
 
 通过 lazyload 属性可以开启图片懒加载
 
-```vue
-<template>
-    <view class="kui-mt-3">
-        <template v-for="i in 100" :key="i">
-            <kui-image  
-                height="200rpx" 
-                :radius="30"
-                lazyload
-                src="https://www.kviewui.com/images/dog1.png" >
-            </kui-image>
-        </template>
-    </view>
-</template>
-```
+<show-code com-type="image" com-show-type="lazyload" />
 
 ## API
 

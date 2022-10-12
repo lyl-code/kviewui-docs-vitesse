@@ -12,92 +12,43 @@
 
 可以通过 `title` 属性设置单元格标题，`sub-title` 属性设置副标题，`desc` 属性设置描述内容，`show-right-icon` 设置是否显示单元格右边箭头，`radius` 属性设置圆角大小
 
-```vue
-<template>
-  <kui-cell title="测试标题" desc="测试描述内容" :show-right-icon="false"></kui-cell>
-  <kui-cell title="测试标题" sub-title="测试副标题" desc="测试描述内容" :show-right-icon="false"></kui-cell>
-  <kui-cell title="圆角大小 0" :radius="0" :show-right-icon="false"></kui-cell>
-</template>
-```
+<show-code com-type="cell" com-show-type="base" />
 
 ### 使用插槽
 
 通过 `content` 插槽可以设置自定义单元格内容，`right-icon` 插槽可以设置自定义右边图标内容，也可以自定义右边显示非图标内容
 
-```vue
-<template>
-    <kui-cell title="测试标题" :show-right-icon="false">
-        <template v-slot:content>
-            <kui-text>自定义插槽内容</kui-text>
-        </template>
-    </kui-cell>
-    <kui-cell title="测试标题">
-        <template v-slot:right-icon>
-            <kui-icons type="heart" color="red"></kui-icons>
-        </template>
-    </kui-cell>
-</template>
-```
+<show-code com-type="cell" com-show-type="slot" />
 
 ### 链接 | 分组用法 | 常规布局
 
 可以通过 `title` 属性设置分组标题，`desc` 属性设置分组描述内容
 
-```vue
-<template>
-    <kui-cell-group title="链接 | 分组 | 常规布局" desc="分组描述内容">
-        <kui-cell title="路由跳转" url="/pages/index/index"></kui-cell>
-        <kui-cell title="链接 官网" url="http://www.kviewui.com"></kui-cell>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="cell" com-show-type="link-group-base" />
 
 ### 链接 | 分组用法 | 间隔布局
 
 可以通过 `type` 属性设置分组间隔
 
-```vue
-<template>
-    <kui-cell-group title="链接 | 分组 | 间隔布局" desc="分组描述内容" type="space">
-        <kui-cell title="路由跳转" url="/pages/index/index"></kui-cell>
-        <kui-cell title="链接 官网" url="http://www.kviewui.com"></kui-cell>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="cell" com-show-type="link-group-space" />
 
 ### 自定义左侧图标区域
 
 可以通过 `left-icon` 插槽设置左侧自定义图标
 
-```vue
-<template>
-    <kui-cell title="自定义图标" :show-right-icon="false">
-        <template v-slot:left-icon>
-            <kui-icons type="image"></kui-icons>
-        </template>
-    </kui-cell>
-</template>
-```
+<show-code com-type="cell" com-show-type="left-icon" />
 
 ### 展示图标
 
 可以通过 `icon` 属性设置单元格图标
 
-```vue
-<template>
-    <kui-cell title="标题" desc="描述内容" icon="image"></kui-cell>
-</template>
-```
+<show-code com-type="cell" com-show-type="icon" />
 
 ### 垂直居中
 
 通过 `center` 属性可以让 Cell 的左右内容都垂直居中。
 
-```vue
-<template>
-    <kui-cell title="标题" sub-title="副标题" desc="描述内容" center></kui-cell>
-</template>
-```
+<show-code com-type="cell" com-show-type="center" />
 
 ## API
 

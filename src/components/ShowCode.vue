@@ -8,10 +8,10 @@ import 'prismjs/plugins/toolbar/prism-toolbar'
 // import 'prismjs/plugins/show-language/prism-show-language'
 
 const props = defineProps({
-  linkCode: {
-    type: String,
-    default: 'https://gitee.com/bad_-code/kviewui/tree/master/components/kui-button',
-  },
+  // linkCode: {
+  //   type: String,
+  //   default: 'https://gitee.com/bad_-code/kviewui/tree/master/components/kui-button',
+  // },
   showPath: {
     type: String,
     default: 'button/ThemeButton',
@@ -20,17 +20,29 @@ const props = defineProps({
     type: String,
     default: 'vue',
   },
+  comType: {
+    type: String,
+    default: 'button',
+  },
+  comShowType: {
+    type: String,
+    default: 'block',
+  },
 })
 
 const source = ref<string>()
+
+const linkCode = ref<string | undefined>(mdConfig()[props.comType]?.linkCode)
 
 onMounted(async () => {
   const modules = import.meta.glob('../pages/components/**/*.vue', {
     as: 'raw',
   })
+
+  const data: any = modules[`../pages/components/examples/${mdConfig()[props.comType]?.showPath[props.comShowType]}.vue`]
+
   /* @vite-ignore */
   // const data: any = await import(/* @vite-ignore */ `../pages/components/examples/${props.showPath}.vue?raw`)
-  const data: any = modules[`../pages/components/examples/${props.showPath}.vue`]
   await data().then((res: any) => {
     source.value = res
     nextTick(() => {
@@ -102,13 +114,30 @@ const showCodeOnline = () => {
     <div v-show="isShow" class="relative">
       <div class="py-12px px-24px rounded-xl !bg-gray-800 relative">
         <pre
-          class="language-vue !bg-gray-800"
+          v-if="language === 'vue' || language === 'html'"
+          :class="`language-${language} !bg-gray-800`"
           data-language="vue"
         ><code class="language-html">{{ source }}</code></pre>
+        <pre
+          v-if="language === 'js' || language === 'ts'"
+          :class="`language-${language} !bg-gray-800`"
+          data-language="vue"
+        ><code class="language-javascript">{{ source }}</code></pre>
+        <pre
+          v-if="language === 'bash'"
+          :class="`language-${language} !bg-gray-800`"
+          data-language="vue"
+        ><code class="language-sh">{{ source }}</code></pre>
+        <pre
+          v-if="language === 'css'"
+          :class="`language-${language} !bg-gray-800`"
+          data-language="vue"
+        ><code class="language-css">{{ source }}</code></pre>
         <div class="absolute top-4 right-4 text-gray-500">
           {{ props.language }}
         </div>
       </div>
+      <!-- 下面部分暂时没用上 -->
       <div
         class="group flex justify-center items-center h-12 cursor-pointer sticky1 bottom-2 !hidden"
         @click="openAndCloseCode"

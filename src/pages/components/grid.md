@@ -12,115 +12,43 @@
 
 通过 `kui-grid` 组件将宫格包裹，`kui-grid-item` 组件设置每个区块的内容，通过 `icon` 属性可以设置每个区块的图标，`text` 属性可以设置每个区块的底部文字。
 
-```vue
-<template>
-    <kui-cell-group title="基本用法">
-        <kui-grid :columns="4">
-            <template v-for="i in 8" :key="i">
-                <kui-grid-item icon="slideshare" text="文本"></kui-grid-item>
-            </template>
-        </kui-grid>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="grid" com-show-type="base" />
 
 ### 自定义列数
 
 通过 `kui-grid` 组件的 `columns` 属性可以设置宫格的列数。
 
-```vue
-<template>
-    <kui-cell-group title="自定义列数">
-        <kui-grid :columns="3">
-            <template v-for="i in 3" :key="i">
-                <kui-grid-item icon="slideshare" text="文本"></kui-grid-item>
-            </template>
-        </kui-grid>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="grid" com-show-type="columns" />
 
 ### 列间距
 
 通过 `kui-grid` 组件的 `gutter` 属性可以设置每列的间距。
 
-```vue
-<template>
-    <kui-cell-group title="列间距">
-        <kui-grid :columns="4" :gutter="30">
-            <template v-for="i in 4" :key="i">
-                <kui-grid-item icon="slideshare" text="文本"></kui-grid-item>
-            </template>
-        </kui-grid>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="grid" com-show-type="gutter" />
 
 ### 内容反向
 
 通过 `kui-grid` 组件的 `reverse` 属性可以设置宫格图标和文字的显示顺序。
 
-```vue
-<template>
-    <kui-cell-group title="内容反向">
-        <kui-grid :columns="4" reverse>
-            <template v-for="i in 4" :key="i">
-                <kui-grid-item icon="slideshare" text="文本"></kui-grid-item>
-            </template>
-        </kui-grid>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="grid" com-show-type="reverse" />
 
 ### 内容横向
 
 通过 `kui-grid` 组件的 `direction` 属性可以设置宫格内容的显示方式。
 
-```vue
-<template>
-    <kui-cell-group title="内容横向">
-        <kui-grid :columns="4" direction="horizontal">
-            <template v-for="i in 4" :key="i">
-                <kui-grid-item icon="slideshare" text="文本"></kui-grid-item>
-            </template>
-        </kui-grid>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="grid" com-show-type="direction" />
 
 ### 图标颜色/大小
 
 通过 `kui-grid-item` 组件的 `icon` 属性可以设置宫格的图标，`icon-color` 属性可以设置图标的颜色，`icon-size` 属性设置图标的大小，`text` 属性设置宫格的文字。
 
-```vue
-<template>
-    <kui-cell-group title="图标颜色大小">
-        <kui-grid :columns="3" iconColor="#00BC79">
-            <template v-for="i in 3" :key="i">
-                <kui-grid-item icon="slideshare" :iconColor="i == 2 ? '#3491FA' : ''" :iconSize="i == 2 ? 70 : 56" text="文本"></kui-grid-item>
-            </template>
-        </kui-grid>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="grid" com-show-type="icon-color-size" />
 
 ### 自定义内容
 
 通过 `kui-grid-item` 组件的默认插槽可以自定义宫格内容。
 
-```vue
-<template>
-    <kui-cell-group title="自定义内容">
-        <kui-grid :columns="3" iconColor="#00BC79">
-            <template v-for="i in 3" :key="i">
-                <kui-grid-item>
-                    <kui-icons type="heart" color="#F53F3F" :size="70"></kui-icons>
-                </kui-grid-item>
-            </template>
-        </kui-grid>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="grid" com-show-type="slot" />
 
 ### Grid Props
 

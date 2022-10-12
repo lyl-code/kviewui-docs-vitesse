@@ -14,182 +14,55 @@
 
 徽标支持 `primary`、`info`、`warning`、`danger`、`success` 五种主题类型，默认为 ''。
 
-```vue
-<template>
-    <kui-cell-group title="徽标类型">
-        <kui-space :gap="[30,20]">
-            <kui-badge></kui-badge>
-            <kui-badge type="primary"></kui-badge>
-            <kui-badge type="info"></kui-badge>
-            <kui-badge type="danger"></kui-badge>
-            <kui-badge type="warning"></kui-badge>
-        </kui-space>
-    </kui-cell-group>
-</template>
-
-```
+<show-code com-type="badge" com-show-type="type" />
 
 ### 圆点徽标
 
 通过 `dot` 属性可以设置圆点徽标样式（`value` 属性建议设置为 `0`）。
 
-```vue
-<template>
-    <kui-cell-group title="圆点徽标">
-        <kui-badge type="danger" value="0" dot></kui-badge>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="badge" com-show-type="dot" />
 
 ### 徽标内容
 
 通过 `value` 属性可以自定义徽标显示内容。
 
-```vue
-<template>
-    <kui-cell-group title="自定义内容徽标">
-        <kui-space :gap="[30,20]">
-            <kui-badge type="primary" value="徽标"></kui-badge>
-            <kui-badge type="danger" value="热门"></kui-badge>
-            <kui-badge type="info" value="kviewui"></kui-badge>
-            <kui-badge type="danger" value="hot"></kui-badge>
-            <kui-badge type="warning" value="66"></kui-badge>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="badge" com-show-type="value" />
 
 ### 渐变主题徽标
 
 通过 `gradient` 属性可以设置徽标的渐变主题。
 
-```vue
-<template>
-    <kui-cell-group title="渐变主题徽标">
-        <kui-space :gap="[30,20]">
-            <kui-badge type="primary" value="666" gradient></kui-badge>
-            <kui-badge type="warning" value="badge" gradient></kui-badge>
-            <kui-badge type="danger" value="hot" gradient></kui-badge>
-            <kui-badge type="info" value="message" gradient></kui-badge>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="badge" com-show-type="gradient" />
 
 ### 最大值
 
 通过 `max` 属性可以开启徽标最大值显示，`value` 超过 `max` 的值将在 `max` 值后显示一个 `+`。
 
-```vue
-<template>
-    <kui-cell-group title="最大值徽标">
-        <kui-space :gap="[30,20]">
-            <kui-badge type="danger" value="66"></kui-badge>
-            <kui-badge type="danger" value="166" :max="99"></kui-badge>
-        </kui-space>
-    </kui-cell-group>
-</template>
-
-```
+<show-code com-type="badge" com-show-type="max" />
 
 ### 定位徽标
 
 通过 `position` 属性可以设置徽标的定位位置，支持右上、右下、左上和左下。
 
-```vue
-<template>
-    <kui-cell-group title="定位徽标">
-        <kui-space :gap="[30,40]">
-            <kui-badge type="danger" position="right-top" value="0">
-                <kui-tag shape="square">右上</kui-tag>
-            </kui-badge>
-            <kui-badge type="danger" position="right-bottom" value="0">
-                <kui-tag shape="square">右下</kui-tag>
-            </kui-badge>
-            <kui-badge type="danger" position="left-top" value="0">
-                <kui-tag shape="square">左上</kui-tag>
-            </kui-badge>
-            <kui-badge type="danger" position="left-bottom" value="0">
-                <kui-tag shape="square">左下</kui-tag>
-            </kui-badge>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="badge" com-show-type="position" />
 
 ### 显示状态
 
 通过 `show` 属性可以设置徽标的显示状态。
 
-```vue
-<template>
-    <kui-cell-group title="显示状态">
-        <kui-space :gap="[30,40]">
-            <kui-badge type="danger" :show="show" position="right-top" value="0">
-                <kui-tag shape="square">动态显示</kui-tag>
-            </kui-badge>
-            <kui-button type="primary" @click="onChange">点击切换徽标状态</kui-button>
-        </kui-space>
-    </kui-cell-group>
-</template>
-<script lang="ts">
-	import {
-		reactive,
-		toRefs
-	} from 'vue';
-	
-	export default {
-		setup() {
-			const state = reactive({
-				show: true,
-				modeChecked: false
-			});
-			
-			const onChange = () => {
-				state.show = !state.show;
-			}
-			
-			return {
-				...toRefs(state),
-				onChange
-			}
-		}
-	}
-</script>
-```
+<show-code com-type="badge" com-show-type="show" />
 
 ### 自定义颜色
 
 通过 `color` 属性可以自由设置徽标的颜色。
 
-```vue
-<template>
-    <kui-cell-group title="自定义颜色徽标">
-        <kui-space :gap="[30,40]">
-            <kui-badge color="hsla(120,120%,20%,1)" position="right-top" value="0">
-                <kui-tag shape="square">自定义颜色</kui-tag>
-            </kui-badge>
-        </kui-space>
-    </kui-cell-group>
-</template>
-
-```
+<show-code com-type="badge" com-show-type="color" />
 
 ### 自定义图标
 
 通过 `icon` 属性可以设置徽标内容为图标。
 
-```vue
-<template>
-    <kui-cell-group title="自定义图标徽标">
-        <kui-space :gap="[30,40]">
-            <kui-badge type="danger" icon="heart" position="right-top">
-                <kui-tag shape="square">自定义图标</kui-tag>
-            </kui-badge>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="badge" com-show-type="icon" />
 
 ## API
 

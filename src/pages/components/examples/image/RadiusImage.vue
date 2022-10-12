@@ -1,0 +1,14 @@
+<template>
+  <kui-image
+    width="200rpx"
+    height="200rpx"
+    :radius="30"
+    src="https://www.kviewui.com/images/dog1.png"
+  />
+  <kui-image
+    width="200rpx"
+    height="200rpx"
+    :radius="300"
+    src="https://www.kviewui.com/images/dog1.png"
+  />
+</template>

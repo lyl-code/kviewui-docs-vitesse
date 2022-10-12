@@ -85,7 +85,7 @@
 | text-color | 按钮文本颜色                    | String  |  |
 | disabled | 是否禁用按钮                                                 | Boolean | `false`   |
 | block    | 是否为块级元素                                               | Boolean | `false`   |
-| icon     | 按钮图标，同 <a href="icons">Icon 图标</a> 组件 type 属性                             | String  | -         |
+| icon     | 按钮图标，同 <a href="icon">Icon 图标</a> 组件 type 属性                             | String  | -         |
 | loading  | 按钮 loading 状态                                            | Boolean | `false`   |
 | loading-type  | 按钮 loading 类型，可参考 <a href="spin">Spin 加载动画</a>组件 |String | `false`   |
 | shadow  | 是否开启按钮阴影                                            | Boolean | `false`   |
