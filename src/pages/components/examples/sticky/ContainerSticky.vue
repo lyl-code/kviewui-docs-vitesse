@@ -6,7 +6,7 @@ import {
 
 import type { SetupContext } from 'vue'
 import { getCurrentInstance, ref } from 'vue'
-import { useKviewuiRect } from '@/common/utils/element'
+import { useKviewuiRect } from '~/common/utils/element'
 
 export default {
   setup(context: SetupContext) {
