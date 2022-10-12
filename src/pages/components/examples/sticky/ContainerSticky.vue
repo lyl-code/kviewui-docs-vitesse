@@ -1,48 +1,49 @@
 <script lang="ts">
-import {
-  onReady,
-  onUnload,
-} from '@dcloudio/uni-app'
+// 复制代码后打开注释，因为自动部署测试限制导致uni库无法直接运行，所以暂时屏蔽
+// import {
+//   onReady,
+//   onUnload,
+// } from '@dcloudio/uni-app'
 
-import type { SetupContext } from 'vue'
-import { getCurrentInstance, ref } from 'vue'
-import { useKviewuiRect } from '~/common/utils/element'
+// import type { SetupContext } from 'vue'
+// import { getCurrentInstance, ref } from 'vue'
+// import { useKviewuiRect } from '~/common/utils/element'
 
-export default {
-  setup(context: SetupContext) {
-    const container = ref(null)
-    const {
-      proxy,
-    }: any = getCurrentInstance()
+// export default {
+//   setup(context: SetupContext) {
+//     const container = ref(null)
+//     const {
+//       proxy,
+//     }: any = getCurrentInstance()
 
-    const observerStart = uni.createIntersectionObserver(proxy)
-    const observerEnd = uni.createIntersectionObserver(proxy)
+//     const observerStart = uni.createIntersectionObserver(proxy)
+//     const observerEnd = uni.createIntersectionObserver(proxy)
 
-    onReady(() => {
-      // 获取节点信息
-      useKviewuiRect(container, 'container').then((res) => {
-        observerStart.relativeToViewport({ top: -res.height }).observe('#container', (res) => {
-          proxy.$refs.sticky.observerStart(res)
-        })
-        observerEnd.relativeToViewport({ top: -120 }).observe('#container', (res) => {
-          proxy.$refs.sticky.observerEnd(res)
-        })
-      })
-      // observer.disconnect();
-    })
+//     onReady(() => {
+//       // 获取节点信息
+//       useKviewuiRect(container, 'container').then((res) => {
+//         observerStart.relativeToViewport({ top: -res.height }).observe('#container', (res) => {
+//           proxy.$refs.sticky.observerStart(res)
+//         })
+//         observerEnd.relativeToViewport({ top: -120 }).observe('#container', (res) => {
+//           proxy.$refs.sticky.observerEnd(res)
+//         })
+//       })
+//       // observer.disconnect();
+//     })
 
-    onUnload(() => {
-      // 停止节点监听
-      observerStart.disconnect()
-      observerEnd.disconnect()
-    })
+//     onUnload(() => {
+//       // 停止节点监听
+//       observerStart.disconnect()
+//       observerEnd.disconnect()
+//     })
 
-    return {
-      container,
-      proxy,
-    }
-  },
-}
+//     return {
+//       container,
+//       proxy,
+//     }
+//   },
+// }
 </script>
 
 <template>
