@@ -16,6 +16,7 @@ import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
 import Raw from 'vite-plugin-raw'
 import presetIcons from '@unocss/preset-icons'
+import Container from 'markdown-it-container'
 
 export default defineConfig({
   resolve: {
@@ -73,6 +74,7 @@ export default defineConfig({
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
+      dirs: ['src/components'],
     }),
 
     // https://github.com/antfu/unocss
@@ -86,7 +88,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-vue-markdown
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
     Markdown({
-      wrapperClasses: 'prose prose-sm m-auto text-left',
+      wrapperClasses: 'prose prose-sm m-auto text-left kviewui-doc',
       headEnabled: true,
       markdownItOptions: {
         html: true,
@@ -106,7 +108,11 @@ export default defineConfig({
             target: '_blank',
             rel: 'noopener',
           },
-        })
+        }),
+        md.use(...createContainer('tip', '提示'))
+          .use(...createContainer('warning', '警告'))
+          .use(...createContainer('danger', '危险警告'))
+          .use(...createContainer('details', '详情块', md))
       },
     }),
 
@@ -177,3 +183,38 @@ export default defineConfig({
     noExternal: ['workbox-window', /vue-i18n/],
   },
 })
+
+/**
+ * 创建不同类型的提示渲染代码块
+ * @param klass
+ *  tip 提示类型
+ *  warning 警告类型
+ *  danger 危险警告
+ *  details 详情块
+ * @param defaultTitle 默认标题
+ * @param md markdown实例
+ * @return string
+ */
+function createContainer(klass: string, defaultTitle: string, md = null) {
+  return [Container, klass, {
+    render(tokens, idx) {
+      const token = tokens[idx]
+      const info = token.info.trim().slice(klass.length).trim()
+
+      if (klass !== 'details') {
+        if (token.nesting === 1)
+          return `<div class="${klass} custom-block"><div class="custom-block-title">${info || defaultTitle}</div>\n`
+
+        else
+          return '</div>\n'
+      }
+      else {
+        if (token.nesting === 1)
+          return `<details class="${klass} custom-block"><summary>${md.utils.escapeHtml(info || defaultTitle)}</summary>\n`
+        else
+          return '</details>\n'
+      }
+    },
+  }]
+}
+

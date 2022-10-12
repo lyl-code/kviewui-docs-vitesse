@@ -60,7 +60,7 @@ const goTop = () => {
       class="container !max-w-screen-2xl lg:px-6 !mx-auto grid-leyout !scrollbar !scrollbar-rounded !scrollbar-w-4px flex justify-between relative top-60px lt-lg:top-120px box-border"
     >
       <aside
-        class="sidebar min-w-200px py-30px pb-160px fixed1 z-50 lg:z-0 h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 lt-lg:!hidden"
+        class="sidebar min-w-200px py-30px pb-160px fixed1 z-50 lg:z-0 h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-4px !scrollbar-thumb-color-green-500/50 dark:!scrollbar-thumb-color-green-700/50 lt-lg:!hidden"
       >
         <Asider />
       </aside>

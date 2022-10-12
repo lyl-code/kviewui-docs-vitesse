@@ -6,6 +6,8 @@ Layout 提供了 `kui-row` 和 `kui-col` 两个辅助布局的组件，帮助您
 
 <!--@include: ./tips/introduce.md-->
 
+<TipsIntroduce />
+
 ## 代码演示
 
 ### 基本用法

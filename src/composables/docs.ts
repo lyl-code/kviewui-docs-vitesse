@@ -109,5 +109,39 @@ export const mdConfig = () => {
         'slot': 'grid/SlotGrid',
       },
     },
+    divider: {
+      linkCode: `${baseLink}/kui-divider`,
+      showPath: {
+        'base': 'divider/BaseDivider',
+        'dashed': 'divider/DashedDivider',
+        'inset': 'divider/InsetDivider',
+        'direction': 'divider/DirectionDivider',
+        'slot': 'divider/SlotDivider',
+        'text-direction': 'divider/TextDirectionDivider',
+        'min-px': 'divider/MinPxDivider',
+        'color-theme': 'divider/ColorThemeDivider',
+      },
+    },
+    space: {
+      linkCode: `${baseLink}/kui-space`,
+      showPath: {
+        'base': 'space/BaseSpace',
+        'direction': 'space/DirectionSpace',
+        'gap': 'space/GapSpace',
+        'justify-end': 'space/JustifyEndSpace',
+        'justify-space-around': 'space/JustifySpaceAroundSpace',
+        'justify-center': 'space/JustifyCenterSpace',
+        'justify-space-between': 'space/JustifySpaceBetweenSpace',
+      },
+    },
+    sticky: {
+      linkCode: `${baseLink}/kui-sticky`,
+      showPath: {
+        base: 'sticky/BaseSticky',
+        top: 'sticky/TopSticky',
+        container: 'sticky/ContainerSticky',
+        bottom: 'sticky/BottomSticky',
+      },
+    },
   }
 }

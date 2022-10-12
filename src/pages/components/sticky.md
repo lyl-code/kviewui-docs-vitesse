@@ -6,116 +6,23 @@ Sticky组件基于CSS中的 `position: sticky` 属性实现的效果，当组件
 
 <!--@include: ./tips/introduce.md-->
 
+<TipsIntroduce />
+
 ### 基本用法
 
-```vue
-<template>
-    <kui-cell-group title="基本用法">
-        <view class="kui-h-full">
-            <view class="kui-bg-white kui-h-8 kui-p-3 kui-rounded-md">
-                <kui-sticky>
-                    <kui-button type="primary">基本用法</kui-button>
-                </kui-sticky>
-            </view>
-        </view>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="sticky" com-show-type="base" />
 
 ### 吸顶距离
 
 通过 `top` 属性可以设置吸顶距离。
 
-```vue
-<template>
-    <kui-cell-group title="吸顶距离">
-        <view class="kui-h-full">
-            <view class="kui-bg-white kui-h-8 kui-p-3 kui-rounded-md">
-                <kui-sticky :top="100">
-                    <kui-button type="danger">吸顶距离100px</kui-button>
-                </kui-sticky>
-            </view>
-        </view>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="sticky" com-show-type="top" />
 
 ### 指定容器
 
 指定容器需要在组件外层提供 `ref` 用来获取容器dom，多端兼容时需要提供和 `ref` 等值的 `id` 属性。获取的外层 `ref` 信息需要赋值给组件的 `container` 属性，组件的 `container-id` 属性需要和外层的 `id` 属性等值。具体实现思路可以参考如下演示代码。
 
-```vue
-<template>
-	<view id="page-app">
-		<kui-page :custom-header="false" :paddingY="0">
-			<view class="body kui-w-full kui-h-full kui-box-border kui-absolute kui-inset-t-0 kui-inset-l-0 kui-p-3">
-				<kui-cell-group title="指定容器">
-                    <view class="kui-h-full">
-                        <view class="kui-bg-white kui-h-96 kui-p-3 kui-rounded-md" ref="container" id="container">
-                            <kui-sticky :top="100" :container="container" :proxy="proxy" container-id="container" ref="sticky">
-                                <kui-button type="warning">指定容器</kui-button>
-                            </kui-sticky>
-                        </view>
-                    </view>
-                </kui-cell-group>
-			</view>
-		</kui-page>
-	</view>
-</template>
-<script lang="ts">
-    import {
-		onReady,
-		onUnload
-	} from '@dcloudio/uni-app';
-
-    import { ref, getCurrentInstance, SetupContext } from 'vue';
-	import { useKviewuiRect } from '@/common/utils/element';
-
-    export default {
-		setup(context: SetupContext) {
-			const container = ref(null);
-			const {
-				proxy
-			}: any = getCurrentInstance();
-			
-			const observerStart = uni.createIntersectionObserver(proxy);
-			const observerEnd = uni.createIntersectionObserver(proxy);
-			
-			onReady(() => {
-				// 获取节点信息
-				useKviewuiRect(container, 'container').then(res => {
-					observerStart.relativeToViewport({top: -res.height}).observe(`#container`, (res) => {
-						proxy.$refs['sticky'].observerStart(res);
-					})
-					observerEnd.relativeToViewport({top: -120}).observe('#container', (res) => {
-						proxy.$refs['sticky'].observerEnd(res);
-					});
-				})
-				// observer.disconnect();
-			})
-			
-			onUnload(() => {
-				// 停止节点监听
-				observerStart.disconnect();
-				observerEnd.disconnect();
-			})
-			
-			return {
-				container,
-				proxy
-			}
-		}
-	}
-</script>
-<style lang="less">
-	page {
-		background-color: #F8F8F8;
-	}
-	.body {
-		min-height: 200vh;
-	}
-</style>
-```
+<show-code com-type="sticky" com-show-type="container" />
 
 ### 吸底距离
 

@@ -6,55 +6,27 @@
 
 <!--@include: ./tips/introduce.md-->
 
+<TipsIntroduce />
+
 ## 代码演示
 
 ### 基本用法
 
 默认在行和列之间增加 `20rpx` 间隔。
 
-```vue
-<template>
-    <kui-cell-group title="基本用法">
-        <kui-space>
-            <kui-button type="primary">演示按钮</kui-button>
-            <kui-button type="info">演示按钮</kui-button>
-            <kui-button type="danger">演示按钮</kui-button>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="space" com-show-type="base" />
 
 ### 垂直布局
 
 通过 `direction` 属性可以设置组件方向，支持水平和垂直两种布局方式。
 
-```vue
-<template>
-    <kui-cell-group title="垂直布局">
-        <kui-space direction="column">
-            <kui-button type="primary">演示按钮</kui-button>
-            <kui-button type="info">演示按钮</kui-button>
-            <kui-button type="danger">演示按钮</kui-button>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="space" com-show-type="direction" />
 
 ### 自定义间隔
 
 通过 `gap` 属性可以设置组件内元素的水平和垂直间隔，规则：`[上下间隔，左右间隔]`。
 
-```vue
-<template>
-    <kui-cell-group title="自定义间隔">
-        <kui-space :gap="[20,50]">
-            <kui-button type="primary">演示按钮</kui-button>
-            <kui-button type="info">演示按钮</kui-button>
-            <kui-button type="danger">演示按钮</kui-button>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="space" com-show-type="gap" />
 
 ### 对齐方式
 
@@ -64,65 +36,25 @@
 
 `justify` 属性为 `end` 可以设置靠右对齐。
 
-```vue
-<template>
-    <kui-cell-group title="靠右对齐">
-        <kui-space justify="end">
-            <kui-button type="primary">演示按钮</kui-button>
-            <kui-button type="info">演示按钮</kui-button>
-            <kui-button type="danger">演示按钮</kui-button>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="space" com-show-type="justify-end" />
 
 #### 环绕对齐
 
 `justify` 属性为 `space-around` 可以设置环绕对齐。
 
-```vue
-<template>
-    <kui-cell-group title="环绕对齐">
-        <kui-space justify="space-around">
-            <kui-button type="primary">演示按钮</kui-button>
-            <kui-button type="info">演示按钮</kui-button>
-            <kui-button type="danger">演示按钮</kui-button>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="space" com-show-type="justify-space-around" />
 
 #### 居中对齐
 
 `justify` 属性为 `center` 可以设置居中对齐。
 
-```vue
-<template>
-    <kui-cell-group title="居中对齐">
-        <kui-space justify="center">
-            <kui-button type="primary">演示按钮</kui-button>
-            <kui-button type="info">演示按钮</kui-button>
-            <kui-button type="danger">演示按钮</kui-button>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="space" com-show-type="justify-center" />
 
 #### 两端对齐
 
 `justify` 属性为 `space-between` 可以设置两端对齐。
 
-```vue
-<template>
-    <kui-cell-group title="两端对齐">
-        <kui-space justify="space-between">
-            <kui-button type="primary">演示按钮</kui-button>
-            <kui-button type="info">演示按钮</kui-button>
-            <kui-button type="danger">演示按钮</kui-button>
-        </kui-space>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="space" com-show-type="justify-space-between" />
 
 ## API
 
