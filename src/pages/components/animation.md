@@ -80,6 +80,10 @@
 
 可以通过组件暴露的 `changeState` 方法统一调整以上文档中所有的动画属性，方便动态设置动画效果。
 
+<TipsDemoWarning />
+
+<show-code language="ts" com-type="animation" com-show-type="demo-ts" />
+
 <show-code com-type="animation" com-show-type="demo" />
 
 ## API

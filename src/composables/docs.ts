@@ -179,6 +179,7 @@ export const mdConfig = () => {
         'fill-mode': 'animation/FillModeAnimation',
         'runing': 'animation/RuningAnimation',
         'demo': 'animation/DemoAnimation',
+        'demo-ts': 'animation/DemoTsAnimation',
       },
     },
   }

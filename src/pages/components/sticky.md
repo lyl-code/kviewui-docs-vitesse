@@ -22,9 +22,7 @@ Sticky组件基于CSS中的 `position: sticky` 属性实现的效果，当组件
 
 指定容器需要在组件外层提供 `ref` 用来获取容器dom，多端兼容时需要提供和 `ref` 等值的 `id` 属性。获取的外层 `ref` 信息需要赋值给组件的 `container` 属性，组件的 `container-id` 属性需要和外层的 `id` 属性等值。具体实现思路可以参考如下演示代码。
 
-::: warning
-因为文档自动部署环境限制，导致uni核心库无法直接运行，所以演示代码将ts和vue部分拆分展示
-:::
+<TipsDemoWarning />
 
 <show-code language="ts" com-type="sticky" com-show-type="container-ts" />
 

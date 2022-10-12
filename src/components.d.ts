@@ -17,6 +17,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     ShowCode: typeof import('./components/ShowCode.vue')['default']
     Simulator: typeof import('./components/Simulator.vue')['default']
+    TipsDemoWarning: typeof import('./components/tips/TipsDemoWarning.md')['default']
     TipsIntroduce: typeof import('./components/tips/TipsIntroduce.md')['default']
   }
 }
