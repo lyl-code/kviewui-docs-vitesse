@@ -137,10 +137,11 @@ export const mdConfig = () => {
     sticky: {
       linkCode: `${baseLink}/kui-sticky`,
       showPath: {
-        base: 'sticky/BaseSticky',
-        top: 'sticky/TopSticky',
-        container: 'sticky/ContainerSticky',
-        bottom: 'sticky/BottomSticky',
+        'base': 'sticky/BaseSticky',
+        'top': 'sticky/TopSticky',
+        'container': 'sticky/ContainerSticky',
+        'bottom': 'sticky/BottomSticky',
+        'container-ts': 'sticky/ContainerTsSticky',
       },
     },
   }
