@@ -19,7 +19,7 @@ export const features = ref<Array<Features>>([{
 }, {
   icon: '🛠️',
   title: '主题定制',
-  details: '内置70+个性化主题可供选择，支持自定义主题定制',
+  details: '内置70+个性化主题可供选择，同时支持自定义主题定制 ',
 }, {
   icon: '🔩',
   title: '全局配置',

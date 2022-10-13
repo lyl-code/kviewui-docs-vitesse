@@ -53,7 +53,7 @@ console.log(features.value)
                 <div class="my-20px text-16px font-600 dark:color-white/90">
                   {{ item.title }}
                 </div>
-                <div class="color-gray5 dark:color-gray4">
+                <div class="color-gray5 dark:color-gray4 text-14px">
                   {{ item.details }}
                 </div>
               </article>
