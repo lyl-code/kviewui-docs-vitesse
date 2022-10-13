@@ -1,7 +1,9 @@
+import type MdConfig from './docs.type'
+
 export const mdConfig = () => {
   const baseLink = 'https://gitee.com/bad_-code/kviewui/tree/master/components'
 
-  return {
+  return <MdConfig>{
     button: {
       // 组件源码仓库地址
       linkCode: `${baseLink}/kui-button`,
@@ -180,6 +182,79 @@ export const mdConfig = () => {
         'runing': 'animation/RuningAnimation',
         'demo': 'animation/DemoAnimation',
         'demo-ts': 'animation/DemoTsAnimation',
+      },
+    },
+    collapse: {
+      linkCode: `${baseLink}/kui-collapse`,
+      showPath: {
+        'base': 'collapse/BaseCollapse',
+        'disabled': 'collapse/DisabledCollapse',
+        'accordion': 'collapse/AccordionCollapse',
+        'taped-state': 'collapse/TapedStateCollapse',
+        'animation': 'collapse/AnimationCollapse',
+        'colors': 'collapse/ColorsCollapse',
+        'slots': 'collapse/SlotsCollapse',
+      },
+    },
+    skeleton: {
+      linkCode: `${baseLink}/kui-skeleton`,
+      showPath: {
+        'base': 'skeleton/BaseSkeleton',
+        'title': 'skeleton/TitleSkeleton',
+        'rows': 'skeleton/RowsSkeleton',
+        'rows-round': 'skeleton/RowsRoundSkeleton',
+        'avatar': 'skeleton/AvatarSkeleton',
+        'card': 'skeleton/CardSkeleton',
+        'layout': 'skeleton/LayoutSkeleton',
+        'animate': 'skeleton/AnimateSkeleton',
+        'animate-type': 'skeleton/AnimateTypeSkeleton',
+      },
+    },
+    progress: {
+      linkCode: `${baseLink}/kui-progress`,
+      showPath: {
+        'base': 'progress/BaseProgress',
+        'width-color': 'progress/WidthColorProgress',
+        'label': 'progress/LabelProgress',
+        'label-inside': 'progress/LabelInsideProgress',
+        'slot-label-inside': 'progress/SlotLabelInsideProgress',
+        'active': 'progress/ActiveProgress',
+        'icon-name': 'progress/IconNameProgress',
+        'shape': 'progress/ShapeProgress',
+        'demo': 'progress/DemoProgress',
+      },
+    },
+    popup: {
+      linkCode: `${baseLink}/kui-popup`,
+      showPath: {
+        'base': 'popup/BasePopup',
+        'position': 'popup/PositionPopup',
+        'radius-size': 'popup/RadiusSizePopup',
+        'icon': 'popup/IconPopup',
+        'close': 'popup/ClosePopup',
+        'callback': 'popup/CallbackPopup',
+      },
+    },
+    snackbar: {
+      linkCode: `${baseLink}/kui-snackbar`,
+      showPath: {
+        'base': 'snackbar/BaseSnackbar',
+        'type': 'snackbar/TypeSnackbar',
+        'plain': 'snackbar/PlainSnackbar',
+        'full': 'snackbar/FullSnackbar',
+        'custom-style': 'snackbar/CustomStyleSnackbar',
+        'content-center': 'snackbar/ContentCenterSnackbar',
+        'position': 'snackbar/PositionSnackbar',
+        'duration': 'snackbar/DurationSnackbar',
+      },
+    },
+    actionsheet: {
+      linkCode: `${baseLink}/kui-actionsheet`,
+      showPath: {
+        'base': 'actionsheet/BaseActionsheet',
+        'cancel': 'actionsheet/CancelActionsheet',
+        'title-desc': 'actionsheet/TitleDescActionsheet',
+        'status': 'actionsheet/StatusActionsheet',
       },
     },
   }

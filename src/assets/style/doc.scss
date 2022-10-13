@@ -9,32 +9,37 @@
     line-height: 24px;
     font-size: 15px;
   }
+
   .tip {
     border-color: rgba($color: map-get($code-colors, green), $alpha: .5);
     background-color: rgba($color: map-get($code-colors, green), $alpha: .1);
     color: map-get($map: $code-colors, $key: green7);
   }
+
   .warning {
     border-color: rgba($color: map-get($code-colors, orange), $alpha: .5);
     background-color: rgba($color: map-get($code-colors, orange), $alpha: .1);
     color: map-get($map: $code-colors, $key: orange7);
   }
+
   .danger {
     border-color: rgba($color: map-get($code-colors, red), $alpha: .5);
     background-color: rgba($color: map-get($code-colors, red), $alpha: .1);
     color: map-get($map: $code-colors, $key: red7);
   }
+
   .details {
     border-color: rgba($color: map-get($code-colors, dark-gray), $alpha: .5);
     background-color: rgba($color: map-get($code-colors, dark-gray), $alpha: .1);
     color: rgba($color: map-get($code-colors, black), $alpha: 1);
   }
+
   .custom-block-title {
     font-weight: 700;
   }
 }
 
-html.dark{
+html.dark {
   .kviewui-doc {
     // 详情块儿暗黑模式样式单独处理
     .details {

@@ -6,120 +6,61 @@
 
 <!--@include: ./tips/introduce.md-->
 
+<TipsIntroduce />
+
 ## 代码演示
 
 ### 基本用法
 
-```vue
-<template>
-    <kui-cell-group title="基本用法">
-        <kui-skeleton></kui-skeleton>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="base"/>
 
 ### 显示标题
 
 通过组件提供的 `title` 属性可以展示骨架中的标题部分。
 
-```vue
-<template>
-    <kui-cell-group title="显示标题">
-        <kui-skeleton title></kui-skeleton>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="title" />
 
 ### 自定义段落
 
 通过组件的 `rows` 属性可以设置骨架的段落行数，`rows-width` 属性可以设置每一行的宽度。
 
-```vue
-<template>
-    <kui-cell-group title="自定义段落">
-        <kui-skeleton title :rows="3" :rows-width="['100px', '150px', '50px']"></kui-skeleton>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="rows" />
 
 ### 段落圆角
 
 通过组件的 `rows-round` 属性可以设置段落边框圆角。
 
-```vue
-<template>
-    <kui-cell-group title="段落圆角">
-        <kui-skeleton title rows-round></kui-skeleton>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="rows-round" />
 
 ### 显示头像
 
 通过组件的 `avatar` 属性可以展示骨架屏内置的头像区域。
 
-```vue
-<template>
-    <kui-cell-group title="显示头像">
-        <kui-skeleton title avatar></kui-skeleton>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="avatar" />
 
 ### 显示卡片
 
 通过组件的 `card` 属性可以展示骨架屏内置的卡片区域。
 
-```vue
-<template>
-    <kui-cell-group title="显示卡片">
-        <kui-skeleton card title avatar></kui-skeleton>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="card" />
 
 ### 自定义布局
 
 通过组件的 `card` `title` `avatar` 属性可以自由组合显示自定义布局骨架。
 
-```vue
-<template>
-    <kui-cell-group title="自定义布局">
-        <view class="kui-flex kui-justify-between kui-w-full">
-            <kui-skeleton card title avatar></kui-skeleton>
-            <view class="kui-mx-2"></view>
-            <kui-skeleton card title avatar></kui-skeleton>
-        </view>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="layout" />
 
 ### 关闭动画
 
 通过组件的 `animate` 属性可以控制是否显示骨架加载动画。
 
-```vue
-<template>
-    <kui-cell-group title="关闭动画">
-        <kui-skeleton title avatar :animate="false"></kui-skeleton>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="animate" />
 
 ### 动画类型
 
 组件开启动画时通过组件的 `animate-type` 属性可以设置动画类型，支持水波动画和闪烁动画，默认为水波动画。
 
-```vue
-<template>
-    <kui-cell-group title="闪烁动画">
-        <kui-skeleton title avatar animate-type="flash"></kui-skeleton>
-    </kui-cell-group>
-    <kui-cell-group title="水波动画">
-        <kui-skeleton title avatar animate-type="backops"></kui-skeleton>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="skeleton" com-show-type="animate-type" />
 
 ## API
 

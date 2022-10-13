@@ -6,174 +6,61 @@
 
 <!--@include: ./tips/introduce.md-->
 
+<TipsIntroduce />
+
 ## 代码演示
 
 ### 基本用法
 
 通过组件提供的 `percent` 属性可以设置进度条的百分比。
 
-```vue
-<template>
-    <kui-cell-group title="基本用法">
-        <kui-progress :percent="30" color="primary"></kui-progress>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="progress" com-show-type="base" />
 
 ### 设置宽度和颜色
 
 通过组件提供的 `line-width` 属性可以设置进度条的宽度，通过 `color` 属性可以设置进度条的背景色，通过 `label-text-color` 属性可以设置进度条右边 `label` 区域的文本色。
 
-```vue
-<template>
-    <kui-cell-group title="设置宽度和颜色">
-        <kui-progress :percent="30" :line-width="30" color="warning" label-text-color="orange"></kui-progress>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="progress" com-show-type="width-color" />
 
 ### 不显示百分比
 
 组件默认的百分比是在组件右边的 `label` 区域设置，通过 `label` 属性可以关闭百分比的显示。
 
-```vue
-<template>
-    <kui-cell-group title="不显示百分比">
-        <kui-progress :percent="30" color="primary" :label="false"></kui-progress>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="progress" com-show-type="label" />
 
 ### 标签內显
 
 通过组件提供的 `label-inside` 属性可以设置标签內显效果，通过 `label-inside-text-bottom` 属性可以设置标签内文本的显示位置。
 
-```vue
-<template>
-    <kui-cell-group title="标签内显">
-        <view class="kui-mb-3">
-            <kui-progress :percent="30" :line-width="10" color="primary" label-inside label-inside-text-bottom="1px"></kui-progress>
-        </view>
-        <view class="kui-mt-5">
-            <kui-progress :percent="50" :line-width="20" color="primary" label-inside-text-bottom="1px" label-inside></kui-progress>
-        </view>
-        <view class="kui-mt-5">
-            <kui-progress :percent="70" :line-width="30" color="primary" label-inside label-inside-text-bottom="2px"></kui-progress>
-        </view>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="progress" com-show-type="label-inside" />
 
 ### 自定义内容內显
 
 通过组件提供的默认插槽可以设置进度条标签自定义内容，通过 `label-inside` 属性可以设置标签內显，通过 `inside-label-style` 属性可以设置內显的 `label` 区样式。
 
-```vue
-<template>
-    <kui-cell-group title="自定义内容內显">
-        <kui-progress :percent="50" label-inside :inside-label-style="{bottom: '0px'}">
-            <kui-icons type="heart" theme="danger" :size="50"></kui-icons>
-        </kui-progress>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="progress" com-show-type="slot-label-inside" />
 
 ### 开启进度条动画
 
 通过组件提供的 `active` 属性可以开启进度条加载动画。
 
-```vue
-<template>
-    <kui-cell-group title="开启进度条动画">
-        <kui-progress :percent="30" color="primary" active></kui-progress>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="progress" com-show-type="active" />
 
 ### 自定义图标
 
 通过组件提供的 `icon-name` 属性可以设置`label`的图标。
 
-```vue
-<template>
-    <kui-cell-group title="自定义图标">
-        <kui-progress 
-            :percent="30" 
-            color="primary" 
-            icon-name="check_circle" 
-            label-text-color="primary" 
-            :label-text-size="36">
-        </kui-progress>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="progress" com-show-type="icon-name" />
 
 ### 方角进度条
 
 通过组件提供的 `shape` 属性可以设置进度条边框形状，支持方角和圆角。
 
-```vue
-<template>
-    <kui-cell-group title="方角进度条">
-        <kui-progress :percent="30" shape="square" color="primary"></kui-progress>
-    </kui-cell-group>
-</template>
-```
+<show-code com-type="progress" com-show-type="shape" />
 
 ### 动态改变
 
-```vue
-<template>
-    <kui-cell-group title="动态改变">
-        <kui-progress :percent="state.perecnt" color="#00BC79"></kui-progress>
-        <view class="kui-flex kui-justify-center kui-mt-3">
-            <kui-button @click="decrease">减少</kui-button>
-            <view class="kui-mx-1"></view>
-            <kui-button type="primary" @click="add">增加</kui-button>
-        </view>
-    </kui-cell-group>
-</template>
-<script lang="ts">
-	import {
-		reactive,
-		toRefs,
-		nextTick
-	} from 'vue';
-	
-	export default {
-		setup() {
-			const state = reactive({
-				perecnt: 0
-			});
-			
-			const add = (type = '') => {
-				nextTick(() => {
-                    state.perecnt = state.perecnt + 20;
-					state.perecnt = state.perecnt > 100 ? 100 : state.perecnt;
-				})
-			}
-			
-			const decrease = (type = '') =>  {
-				nextTick(() => {
-					state.perecnt = state.perecnt - 20;
-					state.perecnt = state.perecnt < 0 ? 0 : state.perecnt;
-				})
-			}
-			
-			return {
-				// ...toRefs(state),
-				state,
-				add,
-				decrease
-			}
-		}
-	}
-</script>
-
-<style>
-
-</style>
-```
+<show-code com-type="progress" com-show-type="demo" />
 
 ## API
 
