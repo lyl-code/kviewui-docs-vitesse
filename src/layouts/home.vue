@@ -42,7 +42,7 @@ console.log(features.value)
           </a>
         </div>
       </div>
-      <div class="border-0px border-red-400 w-full mt-10">
+      <div class="border-0px border-red-400 w-full mt-15">
         <div class="flex flex-wrap grid gap-5 box-border">
           <template v-for="(item, index) in features" :key="index">
             <div class="w-1/4 lt-sm:w-full border-0px border-blue-300">
