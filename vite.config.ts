@@ -17,6 +17,8 @@ import Shiki from 'markdown-it-shiki'
 import Raw from 'vite-plugin-raw'
 import presetIcons from '@unocss/preset-icons'
 import Container from 'markdown-it-container'
+import { presetUno, transformerDirectives } from 'unocss'
+import presetDaisy from 'unocss-preset-daisy'
 
 export default defineConfig({
   resolve: {
@@ -80,8 +82,11 @@ export default defineConfig({
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
     Unocss({
+      transformers: [transformerDirectives()],
       presets: [
         presetIcons({}),
+        presetUno(),
+        presetDaisy(),
       ],
     }),
 
