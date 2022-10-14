@@ -1,0 +1,114 @@
+<script lang="ts">
+import { reactive } from 'vue'
+
+export default {
+  setup() {
+    const baseState = {
+      state: reactive({
+        show: false,
+        title: '',
+        content: '',
+        center: true,
+        bottom: '50px',
+        type: 'normal',
+        overlay: false,
+        icon: '',
+      }),
+      methods: {
+        onClick(
+          title = '',
+          content = '',
+          center = true,
+          bottom = '50px',
+          type = 'normal',
+          overlay = false,
+          icon = '',
+        ) {
+          baseState.state.show = true
+          baseState.state.title = title
+          baseState.state.content = content
+          baseState.state.center = center
+          baseState.state.bottom = bottom
+          baseState.state.type = type
+          baseState.state.overlay = overlay
+          baseState.state.icon = icon
+        },
+      },
+    }
+
+    const state = reactive({
+      mode: 'light',
+      modeChecked: false,
+    })
+
+    const changeMode = () => {
+      state.mode = state.mode == 'light' ? 'dark' : 'light'
+      // provide("changeMode", data.mode);
+      uni.$emit('changeMode', state.mode)
+    }
+
+    return {
+      baseState,
+      changeMode,
+      state,
+    }
+  },
+}
+</script>
+
+<template>
+  <view class="kui-w-full kui-h-full">
+    <kui-page :custom-header="false">
+      <template #body>
+        <view class="kui-w-full kui-h-full">
+          <view class="kui-my-3 kui-flex">
+            <kui-text>暗黑模式：</kui-text>
+            <kui-switch v-model="state.modeChecked" @change="changeMode" />
+          </view>
+          <kui-space :gap="[30, 0]" direction="column">
+            <kui-cell-group title="遮罩类型">
+              <kui-cell
+                title="白色遮罩"
+                :show-right-icon="false"
+                @click="
+                  baseState.methods.onClick(
+                    '白色遮罩提示',
+                    '提示框之外的区域无法被点击穿透',
+                    true,
+                    '',
+                    '',
+                    true,
+                  )
+                "
+              />
+              <kui-cell
+                title="无遮罩"
+                :show-right-icon="false"
+                @click="
+                  baseState.methods.onClick(
+                    '无遮罩提示',
+                    '提示框之外的区域允许点击穿透',
+                    true,
+                    '',
+                    '',
+                    false,
+                  )
+                "
+              />
+            </kui-cell-group>
+          </kui-space>
+        </view>
+      </template>
+    </kui-page>
+    <kui-toast
+      v-model:show="baseState.state.show"
+      :title="baseState.state.title"
+      :content="baseState.state.content"
+      :center="baseState.state.center"
+      :bottom="baseState.state.bottom"
+      :type="baseState.state.type"
+      :overlay="baseState.state.overlay"
+      :icon="baseState.state.icon"
+    />
+  </view>
+</template>

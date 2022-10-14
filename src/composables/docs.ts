@@ -266,5 +266,13 @@ export const mdConfig = () => {
         footer: 'dialog/FooterDialog',
       },
     },
+    toast: {
+      linkCode: `${baseLink}/kui-toast`,
+      showPath: {
+        base: 'toast/BaseToast',
+        type: 'toast/TypeToast',
+        overlay: 'toast/OverlayToast',
+      },
+    },
   }
 }

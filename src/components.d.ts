@@ -13,12 +13,14 @@ declare module '@vue/runtime-core' {
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Home: typeof import('./components/Home.md')['default']
+    ModeProp: typeof import('./components/docs/props/ModeProp.md')['default']
+    PropsModeProp: typeof import('./components/docs/props/PropsModeProp.md')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ShowCode: typeof import('./components/ShowCode.vue')['default']
     Simulator: typeof import('./components/Simulator.vue')['default']
-    TipsDemoWarning: typeof import('./components/tips/TipsDemoWarning.md')['default']
-    TipsIntroduce: typeof import('./components/tips/TipsIntroduce.md')['default']
+    TipsDemoWarning: typeof import('./components/docs/tips/TipsDemoWarning.md')['default']
+    TipsIntroduce: typeof import('./components/docs/tips/TipsIntroduce.md')['default']
   }
 }
