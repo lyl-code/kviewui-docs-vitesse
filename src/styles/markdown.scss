@@ -45,6 +45,9 @@ h2 {
 }
 
 html.dark {
+  * {
+    color: rgba($color: map-get($code-colors, light-gray), $alpha: .8);
+  }
   h2 {
     border-top: 1px solid rgba($color: map-get($code-colors, dark-gray), $alpha: .3) !important;
   }

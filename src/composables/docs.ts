@@ -257,5 +257,14 @@ export const mdConfig = () => {
         'status': 'actionsheet/StatusActionsheet',
       },
     },
+    dialog: {
+      linkCode: `${baseLink}/kui-dialog`,
+      showPath: {
+        normal: 'dialog/NormalDialog',
+        content: 'dialog/ContentDialog',
+        type: 'dialog/TypeDialog',
+        footer: 'dialog/FooterDialog',
+      },
+    },
   }
 }

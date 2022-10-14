@@ -25,11 +25,11 @@ watch(() => route.path, (newPath, oldPath) => {
     <template v-if="pathname.includes('component')">
       <ol v-for="(item, index) in menuList.component" :key="index" class="">
         <RouterLink v-if="item.link" :to="item.link">
-          <span class="font-bold dark:opacity-80">
+          <span class="font-bold dark:opacity-80 dark:color-white/80">
             {{ item.name }}
           </span>
         </RouterLink>
-        <span v-else class="font-bold dark:opacity-80">
+        <span v-else class="font-bold dark:opacity-80 dark:color-white/80">
           {{ item.name }}
         </span>
         <ul class="py-3">
@@ -38,9 +38,9 @@ watch(() => route.path, (newPath, oldPath) => {
             class="text-center px-5 rounded-full dark:opacity-80 my-2"
             :class="pathname === childItem.link ? ' bg-green1 dark:bg-green-900/50' : ''"
           >
-            <RouterLink :to="childItem.link">
+            <RouterLink v-if="childItem.show" :to="childItem.link">
               <span
-                class="font-bold text-sm opacity-80 dark:opacity-60"
+                class="font-bold text-sm opacity-80 dark:opacity-80"
                 :class="pathname === childItem.link ? '!text-green-500' : 'text-gray-800 dark:!text-white'"
               >
                 {{ childItem.name }}
