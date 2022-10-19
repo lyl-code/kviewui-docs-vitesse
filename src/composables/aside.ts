@@ -227,6 +227,31 @@ export const menus = () => {
           },
         ],
       },
+      {
+        name: '表单组件',
+        enName: 'form',
+        link: '',
+        children: [
+          {
+            name: 'Switch 开关',
+            enName: 'switch',
+            type: 'component',
+            show: true,
+            describe: '用来切换打开和关闭状态',
+            author: 'kviewui@163.com',
+            link: '/components/switch',
+          },
+          {
+            name: 'Radio 单选按钮',
+            enName: 'radio',
+            type: 'component',
+            show: true,
+            describe: '在一组备选项中进行单选。',
+            author: 'kviewui@163.com',
+            link: '/components/radio',
+          },
+        ],
+      },
     ],
   }
 }

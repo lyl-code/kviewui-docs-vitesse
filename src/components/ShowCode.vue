@@ -112,7 +112,7 @@ const showCodeOnline = () => {
   <Alert v-if="showAlert" message="在线编辑功能开发中..." theme="warning" />
   <transition name="scale">
     <div v-show="isShow" class="relative">
-      <div class="py-12px px-24px rounded-xl !bg-gray-800 relative">
+      <div class="py-12px px-24px rounded-xl !bg-gray-800 relative max-h-250 overflow-y-auto">
         <pre
           v-if="language === 'vue' || language === 'html'"
           :class="`language-${language} !bg-gray-800`"
@@ -133,24 +133,24 @@ const showCodeOnline = () => {
           :class="`language-${language} !bg-gray-800`"
           data-language="vue"
         ><code class="language-css">{{ source }}</code></pre>
-        <div class="absolute top-4 right-4 text-gray-500">
-          {{ props.language }}
-        </div>
       </div>
       <!-- 下面部分暂时没用上 -->
       <div
         class="group flex justify-center items-center h-12 cursor-pointer sticky1 bottom-2 !hidden"
-        @click="openAndCloseCode"
+        @click="onTapAccordion"
       >
         <svg
-          class="h-4 w-4 group-hover:text-green mr-2 transition"
+          class="h-4 w-4 group-hover:text-green mr-2 transition rotate-180"
           viewBox="0 0 1024 1024"
           xmlns="http://www.w3.org/2000/svg"
           data-v-65a7fb6c=""
         >
           <path fill="currentColor" d="M512 320 192 704h639.936z" />
         </svg>
-        <span class="group-hover:text-green transition">隐藏源代码</span>
+        <span class="group-hover:text-green transition">展开源代码</span>
+      </div>
+      <div class="absolute top-4 right-4 text-gray-500">
+        {{ props.language }}
       </div>
     </div>
   </transition>

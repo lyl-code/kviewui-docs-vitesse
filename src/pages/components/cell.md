@@ -54,66 +54,65 @@
 
 ## API
 
-### CellGroup Prop
+### CellGroup Props
 
-| 字段  | 说明     | 类型   | 默认值 |
-|-------|----------|--------|--------|
-| title | 分组标题 | String | -      |
-| cell-title-weight | 单元格标题粗细 | Number | -      |
-| cell-radius | 单元格圆角大小 | Number | -      |
-| desc  | 分组描述 | String | -      |
-| type  | 单元格类型，可选值为 `normal` `space` | String | `normal`      |
+| 字段 | 说明 | 类型 | 默认值 
+| --- | --- | --- | --- 
+| title | 分组标题 | String | - 
+| cell-title-weight | 单元格标题粗细 | Number | - 
+| cell-radius | 单元格圆角大小 | Number | - 
+| desc | 分组描述 | String | - 
+| type | 单元格类型，有效值见下方说明 | String | `normal` 
 
 ### Type 有效值
-| 值 | 说明   |
-|----|--------|
-| normal | 常规布局 |
-| space | 间隔布局 |
+| 值 | 说明 
+| --- | --- 
+| normal | 常规布局 
+| space | 间隔布局 
 
-### Cell Prop
+### Cell Props
 
-| 字段                    | 说明                                                                                           | 类型             | 默认值           |
-|-------------------------|------------------------------------------------------------------------------------------------|------------------|------------------|
-| title                   | 标题名称                                                                                       | String           | -                |
-| title-size              | 标题大小                                                                                       | Number           | -                |
-| title-weight            | 标题粗细                                                                                       | Number           | 400              |
-| color                   | 标题颜色                                                                                       | String           | -                |
-| sub-title               | 左侧副标题                                                                                     | String           | -                |
-| sub-title-color         | 副标题颜色                                                                                     | String           | -                |
-| desc                    | 右侧描述                                                                                       | String           | -                |
-| desc-color              | 描述内容颜色                                                                                   | String           | -                |
-| radius                  | 圆角大小                                                                                       | Number           | 10               |
-| click-status            | 点击态                                                                                       | Boolean          | true             |
-| show-right-icon         | 是否展示右侧箭头                                                                               | Boolean          | true             |
-| mode `通用属性`          | 页面模式，可选值为 `light` `dark`                                                              | String           | light            |
-| url `非H5环境为复制链接`  | 点击后跳转的链接地址                                                                           | String           | -                |
-| icon                    | 左边图标                                                                                       | String           | -                |
-| center         | 是否使内容垂直居中                                                                             | Boolean          | false            |
+| 字段 | 说明 | 类型 | 默认值 
+| --- | --- | --- | --- 
+| title | 标题名称 | String | - 
+| title-size | 标题大小 | Number | - 
+| title-weight | 标题粗细 | Number | 400 
+| color | 标题颜色 | String | - 
+| sub-title | 左侧副标题 | String | - 
+| sub-title-color | 副标题颜色 | String | - 
+| desc | 右侧描述 | String | - 
+| desc-color | 描述内容颜色 | String | - 
+| radius | 圆角大小 | Number | 10 
+| click-status | 点击态 | Boolean | true 
+| show-right-icon | 是否展示右侧箭头 | Boolean | true 
+| mode `通用属性` | 页面模式，有效值见下方说明 | String | light 
+| url `非H5环境为复制链接` | 点击后跳转的链接地址 | String | - 
+| icon | 左边图标 | String | - 
+| center | 是否使内容垂直居中 | Boolean | false 
 
 ### Mode 有效值
 | 值 | 说明 |
-|----|------|
-| light | 明亮模式 |
-| dark | 暗黑模式 |
+| --- | --- 
+| light | 明亮模式 
+| dark | 暗黑模式 
 
+### Cell Slots
 
-### Cell Event
+| 名称 | 说明 
+| --- | --- 
+| left-icon | 自定义左侧`icon`区域 
+| content | 自定义内容 
+| right-icon | 自定义右侧`icon`区域 
 
-| 名称  | 说明     | 回调参数    |
-|-------|----------|-------------|
-| click | 点击事件 | event:Event |
+### Cell Events
 
-## Cell Slots
+| 名称 | 说明 | 回调参数 
+| --- | --- | --- 
+| click | 点击事件 | event:Event 
 
-| 名称            | 说明                  |
-|-----------------|-----------------------|
-| left-icon       | 自定义左侧`icon`区域  |
-| content         | 自定义内容            |
-| right-icon      | 自定义右侧`icon`区域  |
+### CellGroup Slots
 
-## CellGroup Slots
-
-| 名称            | 说明                  |
-|-----------------|-----------------------|
-| title           | 自定义`title`标题区域 |
-| desc            | 自定义`desc`描述区域  |
+| 名称 | 说明 
+| --- | --- 
+| title | 自定义`title`标题区域 
+| desc | 自定义`desc`描述区域 

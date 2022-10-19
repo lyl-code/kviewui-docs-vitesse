@@ -274,5 +274,28 @@ export const mdConfig = () => {
         overlay: 'toast/OverlayToast',
       },
     },
+    switch: {
+      linkCode: `${baseLink}/kui-switch`,
+      showPath: {
+        base: 'switch/BaseSwitch',
+        disabled: 'switch/DisabledSwitch',
+        loading: 'switch/LoadingSwitch',
+        change: 'switch/ChangeSwitch',
+        async: 'switch/AsyncSwitch',
+        colors: 'switch/ColorsSwitch',
+        text: 'switch/TextSwitch',
+      },
+    },
+    radio: {
+      linkCode: `${baseLink}/kui-radio`,
+      showPath: {
+        'base': 'radio/BaseRadio',
+        'row': 'radio/RowRadio',
+        'icon': 'radio/IconRadio',
+        'icon-size': 'radio/IconSizeRadio',
+        'icon-color': 'radio/IconColorRadio',
+        'change': 'radio/ChangeRadio',
+      },
+    },
   }
 }
