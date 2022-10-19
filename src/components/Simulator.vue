@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const baseURL = 'https://www.kviewui.com/h5#/pages/'
+const baseURL = '/h5/index.html#/pages/'
 const currentURL = ref(route.path)
 const simulator = ref(null)
 const src = ref('')
