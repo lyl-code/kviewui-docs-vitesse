@@ -21,6 +21,11 @@ body,
   transition: background .5s;
 }
 
+ul,
+li {
+  list-style: initial !important;
+}
+
 html.dark {
   background: map-get($map: $code-colors, $key: c-dark-bg);
   color-scheme: dark;

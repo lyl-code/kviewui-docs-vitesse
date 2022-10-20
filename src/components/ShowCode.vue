@@ -157,7 +157,7 @@ const showCodeOnline = () => {
 </template>
 
 <style>
-  ul,li{ padding:0;margin:0;list-style:none}
+  ul,li{ padding:0;margin:0;list-style:none !important}
 
   /*@layer components {*/
   .code-preview-icon {

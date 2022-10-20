@@ -117,6 +117,7 @@ export default defineConfig({
         md.use(...createContainer('tip', '提示'))
           .use(...createContainer('warning', '警告'))
           .use(...createContainer('danger', '危险警告'))
+          .use(...createContainer('info', '信息'))
           .use(...createContainer('details', '详情块', md))
       },
     }),

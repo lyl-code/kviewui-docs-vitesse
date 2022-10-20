@@ -28,6 +28,12 @@
     color: map-get($map: $code-colors, $key: red7);
   }
 
+  .info {
+    border-color: rgba($color: map-get($code-colors, dark-gray), $alpha: .3);
+    background-color: rgba($color: map-get($code-colors, dark-gray), $alpha: .05);
+    color: map-get($map: $code-colors, $key: gray);
+  }
+
   .details {
     border-color: rgba($color: map-get($code-colors, dark-gray), $alpha: .5);
     background-color: rgba($color: map-get($code-colors, dark-gray), $alpha: .1);

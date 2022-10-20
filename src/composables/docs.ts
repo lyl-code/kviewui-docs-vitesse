@@ -297,5 +297,34 @@ export const mdConfig = () => {
         'change': 'radio/ChangeRadio',
       },
     },
+    checkbox: {
+      linkCode: `${baseLink}/kui-checkbox`,
+      showPath: {
+        'base': 'checkbox/BaseCheckbox',
+        'half': 'checkbox/HalfCheckbox',
+        'disabled': 'checkbox/DisabledCheckbox',
+        'icon-size': 'checkbox/IconSizeCheckbox',
+        'icon': 'checkbox/IconCheckbox',
+        'change': 'checkbox/ChangeCheckbox',
+        'group-base': 'checkbox/GroupBaseCheckbox',
+        'group-check': 'checkbox/GroupCheckCheckbox',
+        'group-limit': 'checkbox/GroupLimitCheckbox',
+        'half-demo': 'checkbox/HalfDemoCheckbox',
+      },
+    },
+    input: {
+      linkCode: `${baseLink}/kui-input`,
+      showPath: {
+        'base': 'input/BaseInput',
+        'type': 'input/TypeInput',
+        'disabled': 'input/DisabledInput',
+        'icon': 'input/IconInput',
+        'error': 'input/ErrorInput',
+        'slot': 'input/SlotInput',
+        'font-number': 'input/FontNumberInput',
+        'align': 'input/AlignInput',
+        'no-bottom-border': 'input/NoBottomBorderInput',
+      },
+    },
   }
 }
