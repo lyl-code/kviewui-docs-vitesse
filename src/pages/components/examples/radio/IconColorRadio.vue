@@ -43,22 +43,23 @@ export default {
             <kui-text>暗黑模式：</kui-text>
             <kui-switch v-model="baseState.state.checked" @change="changeMode" />
           </view>
-          <kui-cell-group title="自定义图标颜色">
-            <kui-cell :show-right-icon="false" :click-status="false">
-              <template #content>
-                <view class="kui-flex kui-flex-col">
-                  <kui-radio-group v-model="baseState.state.value">
-                    <kui-radio active-color="blue" inactive-color="danger" :value="1">
-                      自定义图标大小40
-                    </kui-radio>
-                    <kui-radio active-color="blue" inactive-color="danger" :value="2">
-                      自定义图标大小40
-                    </kui-radio>
-                  </kui-radio-group>
-                </view>
-              </template>
-            </kui-cell>
-          </kui-cell-group>
+          <kui-space :gap="[30, 0]" direction="column">
+            <kui-cell-group title="自定义图标颜色">
+              <kui-cell :show-right-icon="false" :click-status="false">
+                <template #content>
+                  <view class="kui-flex kui-flex-col">
+                    <kui-radio-group v-model="baseState.state.value">
+                      <kui-radio active-color="blue" inactive-color="danger" :value="1">
+                        自定义图标大小40
+                      </kui-radio>
+                      <kui-radio active-color="blue" inactive-color="danger" :value="2">
+                        自定义图标大小40
+                      </kui-radio>
+                    </kui-radio-group>
+                  </view>
+                </template>
+              </kui-cell>
+            </kui-cell-group>
           </kui-space>
         </view>
       </template>
