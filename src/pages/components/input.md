@@ -80,6 +80,7 @@
 | error | 是否显示错误 | Boolean | `false`
 | error-message | 是否显示输入框底部的错误信息 | Boolean | `false`
 | error-message-align | 输入框底部错误信息的对齐方式，有效值同 `label-align` 属性 | String | `left`
+| mode`通用属性` | 页面模式，有效值见下方说明 | String  | `light`
 | type | 见 [uniapp input输入框](https://uniapp.dcloud.net.cn/component/input.html) | String | `text`
 | text-content-type | 见 [uniapp input输入框](https://uniapp.dcloud.net.cn/component/input.html) | String | -
 | password | 见 [uniapp input输入框](https://uniapp.dcloud.net.cn/component/input.html) | Boolean | `false`
@@ -122,6 +123,8 @@
 | --- | ---
 | left | 左侧文本左边
 | right | 左侧文本右边
+
+<PropsModeProp />
 
 ### Events
 | 名称 | 说明 | 回调参数

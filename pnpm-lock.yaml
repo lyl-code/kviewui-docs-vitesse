@@ -31,6 +31,7 @@ specifiers:
   prismjs: ^1.29.0
   sass: ^1.55.0
   shiki: ^0.11.1
+  silly-datetime: ^0.1.2
   taze: ^0.8.2
   typescript: ^4.8.3
   unocss: ^0.45.25
@@ -95,6 +96,7 @@ devDependencies:
   prismjs: 1.29.0
   sass: 1.55.0
   shiki: 0.11.1
+  silly-datetime: 0.1.2
   taze: 0.8.2
   typescript: 4.8.4
   unocss: 0.45.29_vite@3.1.6
@@ -7115,6 +7117,10 @@ packages:
 
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
+
+  /silly-datetime/0.1.2:
+    resolution: {integrity: sha512-q8hnO91rRvQsYTYaZCJc6UpljzfdmWD3bNljDLKGVBT2ukj7snE+ENkVVkXfo529ABLEBeN6PHoEaT1ONEq81w==}
+    dev: true
 
   /simple-concat/1.0.1:
     resolution: {integrity: sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==}

@@ -326,5 +326,36 @@ export const mdConfig = () => {
         'no-bottom-border': 'input/NoBottomBorderInput',
       },
     },
+    stepper: {
+      linkCode: `${baseLink}/kui-stepper`,
+      showPath: {
+        'base': 'stepper/BaseStepper',
+        'step': 'stepper/StepStepper',
+        'disabled': 'stepper/DisabledStepper',
+        'disabled-input': 'stepper/DisabledInputStepper',
+        'min-max': 'stepper/MinMaxStepper',
+        'decimal-step': 'stepper/DecimalStepStepper',
+        'decimal-places': 'stepper/DecimalPlacesStepper',
+        'custom-style': 'stepper/CustomStyleStepper',
+        'auto-hidden': 'stepper/AutoHiddenStepper',
+        'disabled-change': 'stepper/DisabledChangeStepper',
+      },
+    },
+    numberkeyboard: {
+      linkCode: `${baseLink}/kui-numberkeyboard`,
+      showPath: {
+        'base': 'numberkeyboard/BaseNumberkeyboard',
+        'random': 'numberkeyboard/RandomNumberkeyboard',
+        'title': 'numberkeyboard/TitleNumberkeyboard',
+        'idcard': 'numberkeyboard/IdcardNumberkeyboard',
+        'desc': 'numberkeyboard/DescNumberkeyboard',
+        'inputting': 'numberkeyboard/InputtingNumberkeyboard',
+        'right-base': 'numberkeyboard/RightBaseNumberkeyboard',
+        'right-random': 'numberkeyboard/RightRandomNumberkeyboard',
+        'right-confirm-bg': 'numberkeyboard/RightConfirmBgNumberkeyboard',
+        'right-confirm-text': 'numberkeyboard/RightConfirmTextNumberkeyboard',
+        'right-title': 'numberkeyboard/RightTitleNumberkeyboard',
+      },
+    },
   }
 }
