@@ -3,6 +3,11 @@
   "private": true,
   "packageManager": "pnpm@7.8.0",
   "version": "1.0.0",
+  "author": {
+    "name": "kviewui",
+    "email": "kviewui@163.com",
+    "url": "https://github.com/lyl-code"
+  },
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
@@ -13,7 +18,8 @@
     "test:e2e": "cypress open",
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit",
-    "up": "taze major -I"
+    "up": "taze major -I",
+    "create-page": "tsup script/pageInit.ts && node dist/pageInit.cjs"
   },
   "dependencies": {
     "@kidonng/daisyui": "^2.31.0",

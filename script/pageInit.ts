@@ -1,12 +1,16 @@
 import fs, { constants } from 'fs'
 import { access } from 'fs/promises'
 import path from 'path'
+import readline from 'readline'
 import sd from 'silly-datetime'
 import { menus } from '../src/composables/aside'
+import {
+  author,
+  version,
+} from '../package.json'
 import { std } from './std'
 
 // 引入readline模块
-const readline = require('readline')
 
 // 创建readline接口实例
 const r1 = readline.createInterface({
@@ -15,7 +19,7 @@ const r1 = readline.createInterface({
 })
 
 const fwFile = (str: string, flag: any, fileName: string, filePath: string) => {
-  fs.writeFileSync(path.resolve(process.cwd(), `./src/pages/components/${fileName}.md`), str, {
+  fs.writeFileSync(filePath, str, {
     flag,
   })
 }
@@ -44,9 +48,9 @@ r1.question('请输入页面名称：\t', async (answer) => {
   // 自定义页面初始化内容
   const content
   = `<!-- 
-该文件由系统自动生成
-@Author <kviewui@163.com>
-@CreateDate ${sd.format(new Date(), 'YYYY-MM-DD HH:mm')}
+该文件由系统自动生成 ${sd.format(new Date(), 'YYYY-MM-DD HH:mm')}
+@version ${version}
+@author ${author.name} <${author.email}>
 -->
 # ${readAsideInfo?.name}
 

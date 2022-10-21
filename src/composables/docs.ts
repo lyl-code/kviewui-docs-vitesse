@@ -357,5 +357,17 @@ export const mdConfig = () => {
         'right-title': 'numberkeyboard/RightTitleNumberkeyboard',
       },
     },
+    picker: {
+      linkCode: `${baseLink}/kui-picker`,
+      showPath: {
+        'single-base': 'picker/SingleBasePicker',
+        'multicolumn-base': 'picker/MulticolumnBasePicker',
+        'multicolumn-chain': 'picker/MulticolumnChainPicker',
+        'multicolumn-default': 'picker/MulticolumnDefaultPicker',
+        'loading-base': 'picker/LoadingBasePicker',
+        'loading-icon': 'picker/LoadingIconPicker',
+        'loading-async': 'picker/LoadingAsyncPicker',
+      },
+    },
   }
 }
