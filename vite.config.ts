@@ -132,8 +132,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        // name: 'Vitesse',
+        name: 'KviewUI',
+        // short_name: 'Vitesse',
+        short_name: 'KviewUI',
         theme_color: '#ffffff',
         icons: [
           {

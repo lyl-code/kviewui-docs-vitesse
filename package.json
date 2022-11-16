@@ -61,6 +61,7 @@
     "shiki": "^0.11.1",
     "silly-datetime": "^0.1.2",
     "taze": "^0.8.2",
+    "tsup": "^6.5.0",
     "typescript": "^4.8.3",
     "unocss": "^0.45.25",
     "unocss-preset-extra": "^0.4.3",

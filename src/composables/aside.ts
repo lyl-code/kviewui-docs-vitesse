@@ -293,6 +293,14 @@ export const menus = () => {
             describe: '底部弹出多项集合供用户滚动选择其中一项。',
             link: '/components/picker',
           },
+          {
+            name: 'Rate 评分',
+            enName: 'rate',
+            type: 'component',
+            show: true,
+            describe: '用于快速的评级操作，或对评级进行展示。',
+            link: '/components/rate',
+          }
         ],
       },
     ],

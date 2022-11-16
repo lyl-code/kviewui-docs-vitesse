@@ -369,5 +369,21 @@ export const mdConfig = () => {
         'loading-async': 'picker/LoadingAsyncPicker',
       },
     },
+    rate: {
+      linkCode: `${baseLink}/kui-rate`,
+      showPath: {
+        'base': 'rate/BaseRate',
+        'count': 'rate/CountRate',
+        'color': 'rate/ColorRate',
+        'icon': 'rate/IconRate',
+        'half': 'rate/HalfRate',
+        'size': 'rate/SizeRate',
+        'gap': 'rate/GapRate',
+        'disabled': 'rate/DisabledRate',
+        'readonly': 'rate/ReadonlyRate',
+        'change': 'rate/ChangeRate',
+        'rules': 'rate/RulesRate',
+      }
+    }
   }
 }

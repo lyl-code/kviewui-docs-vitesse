@@ -13,7 +13,6 @@ declare module '@vue/runtime-core' {
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Home: typeof import('./components/Home.md')['default']
-    ModeProp: typeof import('./components/docs/props/ModeProp.md')['default']
     PropsModeProp: typeof import('./components/docs/props/PropsModeProp.md')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
