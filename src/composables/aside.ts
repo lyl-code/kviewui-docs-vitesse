@@ -300,7 +300,15 @@ export const menus = () => {
             show: true,
             describe: '用于快速的评级操作，或对评级进行展示。',
             link: '/components/rate',
-          }
+          },
+          {
+            name: 'Slider 滑块',
+            enName: 'slider',
+            type: 'component',
+            show: true,
+            describe: '滑动输入条，用于在给定范围内选择一个值。',
+            link: '/components/slider',
+          },
         ],
       },
     ],
