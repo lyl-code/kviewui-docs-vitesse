@@ -6,11 +6,11 @@ import {
 
 export default {
   setup() {
-    const rangeValue = ref([20, 60])
+    const hiddenLabelValue = ref(0)
 
     return {
       ...toRefs({
-        rangeValue,
+        hiddenLabelValue,
       }),
     }
   },
@@ -24,8 +24,8 @@ export default {
         <view class="kui-w-full">
           <kui-space :gap="[30, 0]" direction="column">
             <view class="kui-w-full">
-              <kui-cell-group title="双滑块">
-                <kui-slider v-model="rangeValue" range />
+              <kui-cell-group title="隐藏标签">
+                <kui-slider v-model="hiddenLabelValue" hidden-label />
               </kui-cell-group>
             </view>
           </kui-space>

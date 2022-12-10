@@ -1,16 +1,29 @@
 <script lang="ts">
 import {
-  ref,
+  reactive,
   toRefs,
 } from 'vue'
 
 export default {
   setup() {
-    const rangeValue = ref([20, 60])
+    const rulesState = {
+      state: reactive({
+        value: 20,
+      }),
+      rules: {
+        validator: value => value > 20,
+        message: '值必须大于20',
+      },
+      methods: {
+        onChange(e) {
+          console.log(e)
+        },
+      },
+    }
 
     return {
       ...toRefs({
-        rangeValue,
+        rulesState,
       }),
     }
   },
@@ -24,8 +37,8 @@ export default {
         <view class="kui-w-full">
           <kui-space :gap="[30, 0]" direction="column">
             <view class="kui-w-full">
-              <kui-cell-group title="双滑块">
-                <kui-slider v-model="rangeValue" range />
+              <kui-cell-group title="值的校验" desc="暂不支持双滑块">
+                <kui-slider v-model="rulesState.state.value" :rules="rulesState.rules" @change="rulesState.methods.onChange" />
               </kui-cell-group>
             </view>
           </kui-space>

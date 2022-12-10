@@ -6,11 +6,11 @@ import {
 
 export default {
   setup() {
-    const rangeValue = ref([20, 60])
+    const disableValue = ref(20)
 
     return {
       ...toRefs({
-        rangeValue,
+        disableValue,
       }),
     }
   },
@@ -24,8 +24,8 @@ export default {
         <view class="kui-w-full">
           <kui-space :gap="[30, 0]" direction="column">
             <view class="kui-w-full">
-              <kui-cell-group title="双滑块">
-                <kui-slider v-model="rangeValue" range />
+              <kui-cell-group title="禁用">
+                <kui-slider v-model="disableValue" disabled />
               </kui-cell-group>
             </view>
           </kui-space>

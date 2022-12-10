@@ -6,11 +6,11 @@ import {
 
 export default {
   setup() {
-    const rangeValue = ref([20, 60])
+    const hiddenActiveRipple = ref(0)
 
     return {
       ...toRefs({
-        rangeValue,
+        hiddenActiveRipple,
       }),
     }
   },
@@ -24,8 +24,8 @@ export default {
         <view class="kui-w-full">
           <kui-space :gap="[30, 0]" direction="column">
             <view class="kui-w-full">
-              <kui-cell-group title="双滑块">
-                <kui-slider v-model="rangeValue" range />
+              <kui-cell-group title="隐藏拖动水波纹" desc="拖动得时候不显示按钮周围的水波纹样式">
+                <kui-slider v-model="hiddenActiveRipple" hidden-active-ripple />
               </kui-cell-group>
             </view>
           </kui-space>
