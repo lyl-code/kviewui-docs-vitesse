@@ -96,7 +96,12 @@
 ### 上传前置处理
 通过组件提供的 `before-upload` 属性可以自定义函数实现上传前置处理逻辑，组件提供了上传前图片压缩【H5支持】和上传前图片格式校验，具体可参考下方示例代码。
 
+::: tip
+由于演示部署系统限制，下面演示代码将分开演示
+:::
+
 <show-code com-type="uploader" com-show-type="before-upload" />
+<show-code language="ts" com-type="uploader" com-show-type="before-upload-ts" />
 
 ### 删除前置处理
 通过组件提供的 `before-delete` 属性可以自定义函数实现删除前置处理逻辑，组件提供了删除前二次确认场景，具体可参考下方示例代码。

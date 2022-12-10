@@ -440,6 +440,7 @@ export const mdConfig = () => {
         'auto-upload': 'uploader/AutoUploadUploader',
         'upload-icon-size': 'uploader/UploadIconSizeUploader',
         'before-upload': 'uploader/BeforeUploadUploader',
+        'before-upload-ts': 'uploader/BeforeUploadTSUploader',
         'before-delete': 'uploader/BeforeDeleteUploader',
         'disabled': 'uploader/DisabledUploader',
         'preview-full-image': 'uploader/PreviewFullImageUploader',
