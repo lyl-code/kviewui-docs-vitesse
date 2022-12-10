@@ -403,5 +403,18 @@ export const mdConfig = () => {
         'rules': 'slider/RulesSlider',
       },
     },
+    searchbar: {
+      linkCode: `${baseLink}/kui-searchbar`,
+      showPath: {
+        'base': 'searchbar/BaseSearchBar',
+        'event': 'searchbar/EventSearchBar',
+        'show-lefticon': 'searchbar/ShowLefticonSearchBar',
+        'input-align': 'searchbar/InputAlignSearchBar',
+        'disabled': 'searchbar/DisabledSearchBar',
+        'custom-style': 'searchbar/CustomStyleSearchBar',
+        'show-all-icon': 'searchbar/ShowAllIconSearchBar',
+        'click-input': 'searchbar/ClickInputSearchBar',
+      },
+    },
   }
 }

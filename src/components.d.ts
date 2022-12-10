@@ -20,6 +20,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     ShowCode: typeof import('./components/ShowCode.vue')['default']
     Simulator: typeof import('./components/Simulator.vue')['default']
+    Tag: typeof import('./components/docs/Tag.vue')['default']
     TipsDemoWarning: typeof import('./components/docs/tips/TipsDemoWarning.md')['default']
     TipsIntroduce: typeof import('./components/docs/tips/TipsIntroduce.md')['default']
   }
