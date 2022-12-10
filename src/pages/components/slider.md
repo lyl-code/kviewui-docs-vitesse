@@ -116,7 +116,7 @@
 | thumb | 自定义滑块插槽
 
 ### Events
-| 名称 | 说明 | 回调参数
+| 事件名称 | 说明 | 回调参数
 | --- | --- | ---
 | update:modelValue | `v-model`属性双向绑定 | value: number
 | change | 滑块变化时触发事件 | {type: string, error: boolean, range: boolean, value: number}，`type` 字段为变化触发事件类型，可为 `touchmove`\|`click`，`error`字段为校验是否错误，`range`字段表示是否为双滑块变化，`value`字段为当前选择值

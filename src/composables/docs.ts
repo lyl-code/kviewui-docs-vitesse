@@ -416,5 +416,35 @@ export const mdConfig = () => {
         'click-input': 'searchbar/ClickInputSearchBar',
       },
     },
+    shortpassword: {
+      linkCode: `${baseLink}/kui-shortpassword`,
+      showPath: {
+        base: 'shortpassword/BaseShortPassword',
+        length: 'shortpassword/LengthShortPassword',
+        password: 'shortpassword/PasswordShortPassword',
+        tips: 'shortpassword/TipsShortPassword',
+      },
+    },
+    uploader: {
+      linkCode: `${baseLink}/kui-uploader`,
+      showPath: {
+        'base': 'uploader/BaseUploader',
+        'status': 'uploader/StatusUploader',
+        'hidden-preview-image': 'uploader/HiddenPreviewImageUploader',
+        'preview-image': 'uploader/PreviewImageUploader',
+        'max-count': 'uploader/MaxCountUploader',
+        'max-size': 'uploader/MaxSizeUploader',
+        'upload-icon': 'uploader/UploadIconUploader',
+        'custom-upload-style': 'uploader/CustomUploadStyleUploader',
+        'preview-cover': 'uploader/PreviewCoverUploader',
+        'auto-upload': 'uploader/AutoUploadUploader',
+        'upload-icon-size': 'uploader/UploadIconSizeUploader',
+        'before-upload': 'uploader/BeforeUploadUploader',
+        'before-delete': 'uploader/BeforeDeleteUploader',
+        'disabled': 'uploader/DisabledUploader',
+        'preview-full-image': 'uploader/PreviewFullImageUploader',
+        'custom-click-item': 'uploader/CustomClickItemUploader',
+      },
+    },
   }
 }
