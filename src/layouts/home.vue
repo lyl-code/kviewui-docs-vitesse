@@ -28,7 +28,7 @@ console.log(features.value)
             <p class="py-6 text-2xl color-gray-500">
               基于UNI-APP框架的多端开发UI组件库，让您的开发效率加倍提升
             </p>
-            <RouterLink to="/components/button">
+            <RouterLink to="/guide/intro">
               <button class="btn1 bg-green6 dark:bg-green5 rounded-full btn-primary py-2 px-6 mr-3 mb-3 hover:bg-green5">
                 开始
               </button>
