@@ -19,6 +19,11 @@ useHead({
     },
   ],
 })
+
+if (isDark.value)
+  document.body.setAttribute('arco-theme', 'dark')
+else
+  document.body.removeAttribute('arco-theme')
 </script>
 
 <template>

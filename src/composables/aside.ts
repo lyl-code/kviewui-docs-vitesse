@@ -336,5 +336,34 @@ export const menus = () => {
         ],
       },
     ],
+    guide: [
+      {
+        name: '介绍',
+        enName: 'intro',
+        type: 'guide',
+        show: true,
+        describe: '',
+        link: '/guide/intro',
+        children: [],
+      },
+      {
+        name: '快速上手',
+        enName: 'start',
+        type: 'guide',
+        show: true,
+        describe: '',
+        link: '/guide/start',
+        children: [],
+      },
+      {
+        name: '颜色',
+        enName: 'palette',
+        type: 'guide',
+        show: true,
+        describe: '',
+        link: '/guide/palette',
+        children: [],
+      },
+    ],
   }
 }

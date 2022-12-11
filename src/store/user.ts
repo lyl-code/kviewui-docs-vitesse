@@ -1,4 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import { isDark } from '~/composables/dark'
 
 export const useUserStore = defineStore('user', () => {
   /**
@@ -23,10 +24,18 @@ export const useUserStore = defineStore('user', () => {
     savedName.value = name
   }
 
+  const darkMode = ref(isDark)
+
+  const setMode = (mode: boolean) => {
+    darkMode.value = mode
+  }
+
   return {
     setNewName,
     otherNames,
     savedName,
+    darkMode,
+    setMode,
   }
 })
 

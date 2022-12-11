@@ -31,6 +31,24 @@ const showMore = ref(false)
 const toggleMore = (bool: boolean) => {
   showMore.value = bool
 }
+
+const store = useUserStore()
+const { darkMode } = storeToRefs(store)
+
+const changeDark = () => {
+  toggleDark()
+  store.setMode(isDark.value)
+  console.log(darkMode.value)
+  if (isDark.value)
+    document.body.setAttribute('arco-theme', 'dark')
+
+  else
+    document.body.removeAttribute('arco-theme')
+}
+
+const subscribe = store.$subscribe((mutation, state) => {
+  console.log(state.darkMode)
+}, { detached: true })
 </script>
 
 <template>
@@ -92,7 +110,7 @@ const toggleMore = (bool: boolean) => {
             <div class="color-gray-600 dark:!color-gray text-xl color-gray" i-carbon-logo-github />
           </a>
 
-          <button class="icon-btn mx-5 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
+          <button class="icon-btn mx-5 !outline-none" :title="t('button.toggle_dark')" @click="changeDark()">
             <div class="color-gray-600 dark:!color-gray text-xl color-gray" i="carbon-sun dark:carbon-moon" />
           </button>
 
@@ -192,3 +210,9 @@ const toggleMore = (bool: boolean) => {
     </div>
   </nav>
 </template>
+
+<style>
+  /* .arco-tabs-tab-active {
+    color: red !important;
+  } */
+</style>

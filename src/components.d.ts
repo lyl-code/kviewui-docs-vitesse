@@ -13,6 +13,8 @@ declare module '@vue/runtime-core' {
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Home: typeof import('./components/Home.md')['default']
+    Palette: typeof import('./components/Palette.vue')['default']
+    Palettes: typeof import('./components/Palettes.vue')['default']
     PropsModeProp: typeof import('./components/docs/props/PropsModeProp.md')['default']
     PropsRulesProp: typeof import('./components/docs/props/PropsRulesProp.md')['default']
     README: typeof import('./components/README.md')['default']

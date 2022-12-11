@@ -50,5 +50,23 @@ watch(() => route.path, (newPath, oldPath) => {
         </ul>
       </ol>
     </template>
+    <template v-if="pathname.includes('guide')">
+      <ul class="py-3">
+        <li
+          v-for="(childItem, childIndex) in menuList.guide" :key="childIndex"
+          class="text-center px-5 rounded-full dark:opacity-80 my-2"
+          :class="pathname === childItem.link ? ' bg-green1 dark:bg-green-900/50' : ''"
+        >
+          <RouterLink v-if="childItem.show" :to="childItem.link">
+            <span
+              class="font-bold text-sm opacity-80 dark:opacity-80"
+              :class="pathname === childItem.link ? '!text-green-500' : 'text-gray-800 dark:!text-white'"
+            >
+              {{ childItem.name }}
+            </span>
+          </RouterLink>
+        </li>
+      </ul>
+    </template>
   </div>
 </template>

@@ -1,6 +1,7 @@
 import { ViteSSG } from 'vite-ssg'
 import { setupLayouts } from 'virtual:generated-layouts'
 import Previewer from 'virtual:vue-component-preview'
+import ArcoVue from '@arco-design/web-vue'
 import App from './App.vue'
 import type { UserModule } from './types'
 import generatedRoutes from '~pages'
@@ -10,6 +11,7 @@ import './styles/main.scss'
 import '@kidonng/daisyui/index.css'
 import 'uno.css'
 import './assets/style/doc.scss'
+import '@arco-design/web-vue/dist/arco.css'
 
 const routes = setupLayouts(generatedRoutes)
 
@@ -22,5 +24,6 @@ export const createApp = ViteSSG(
     Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))
       .forEach(i => i.install?.(ctx))
     ctx.app.use(Previewer)
+    ctx.app.use(ArcoVue)
   },
 )

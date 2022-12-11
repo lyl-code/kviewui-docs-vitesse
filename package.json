@@ -26,6 +26,9 @@
     "@unocss/reset": "^0.45.24",
     "@vueuse/core": "^9.3.0",
     "@vueuse/head": "^0.7.12",
+    "fs": "0.0.1-security",
+    "kviewui-color": "^1.1.8",
+    "lodash": "^4.17.21",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.22",
     "unocss-preset-daisy": "^1.2.0",
@@ -36,6 +39,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
+    "@arco-design/web-vue": "^2.40.0",
     "@iconify-json/carbon": "^1.1.8",
     "@intlify/vite-plugin-vue-i18n": "^6.0.2",
     "@julr/unocss-preset-flowbite": "^0.0.1",

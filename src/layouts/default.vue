@@ -3,9 +3,11 @@ const route = useRoute()
 
 const pathname = window.location.pathname
 const isComponentRoute = ref(pathname.includes('/component'))
+const isGuideRoute = ref(pathname.includes('/guide'))
 watch(() => route.path, (newPath, oldPath) => {
   nextTick(() => {
     isComponentRoute.value = newPath.includes('/component')
+    isGuideRoute.value = newPath.includes('/guide')
   })
 }, { immediate: true })
 
@@ -69,7 +71,7 @@ const goTop = () => {
     </main> -->
       <RouterView
         id="content"
-        class="!block lg:max-w-280 !h-screen !overflow-auto !scrollbar !scrollbar-rounded !scrollbar-w-0px !scrollbar-thumb-color-transparent box-border px-10 pt-30px pb-176px"
+        class="!block lg:max-w-280 !h-screen !overflow-x-hidden !scrollbar !scrollbar-rounded !scrollbar-w-0px !scrollbar-thumb-color-transparent box-border px-10 pt-30px pb-176px"
       />
     </div>
     <!-- <div class="color-black flex items-center">
