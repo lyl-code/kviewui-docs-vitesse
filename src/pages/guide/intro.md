@@ -44,12 +44,12 @@ KviewUI 是一个基于 [UNI-APP](https://uniapp.dcloud.net.cn) 开发的多端�
 - 🛠️ 支持H5/APP/小程序
 
 ### 快速体验
-<div class="flex my-10">
-    <div class="flex flex-col items-center mr-20">
+<div class="flex my-10 grid gap-10">
+    <div class="flex flex-col items-center">
         <img class="!w-50 !h-50" src="/qrcode/h5.png" />
         <div class="text-lg mt-3">H5</div>
     </div>
-    <div class="flex flex-col items-center mr-20">
+    <div class="flex flex-col items-center">
         <img class="!w-50 !h-50" src="/qrcode/wx_mp.png" />
         <div class="text-lg mt-3">微信小程序</div>
     </div>

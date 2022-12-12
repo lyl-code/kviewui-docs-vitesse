@@ -364,6 +364,15 @@ export const menus = () => {
         link: '/guide/palette',
         children: [],
       },
+      {
+        name: '设计变量',
+        enName: 'token',
+        type: 'guide',
+        show: true,
+        describe: '',
+        link: '/guide/token',
+        children: [],
+      },
     ],
   }
 }

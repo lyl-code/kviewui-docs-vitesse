@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Alert: typeof import('./components/Alert.vue')['default']
     Asider: typeof import('./components/Asider.vue')['default']
+    ChangeMode: typeof import('./components/ChangeMode.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
@@ -25,5 +26,6 @@ declare module '@vue/runtime-core' {
     Tag: typeof import('./components/docs/Tag.vue')['default']
     TipsDemoWarning: typeof import('./components/docs/tips/TipsDemoWarning.md')['default']
     TipsIntroduce: typeof import('./components/docs/tips/TipsIntroduce.md')['default']
+    TokenColors: typeof import('./components/docs/guide/TokenColors.vue')['default']
   }
 }
