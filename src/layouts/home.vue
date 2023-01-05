@@ -6,7 +6,7 @@ console.log(features.value)
   <header>
     <Header />
   </header>
-  <main class="container mx-auto flex flex-col items-center border-red border-0px">
+  <main class="container mx-auto flex flex-col items-center border-red border-0px overflow-x-hidden! !scrollbar !scrollbar-rounded !scrollbar-w-0px !scrollbar-thumb-color-transparent">
     <RouterView />
     <!-- <Home /> -->
     <!-- <Footer /> -->
@@ -20,7 +20,7 @@ console.log(features.value)
           <div />
           <div>
             <h1 class="text-7xl font-bold">
-              <span class="!color-green-600/90 font-sans font-bold">KviewUI</span>
+              <span style="background-image: linear-gradient(120deg, #3491FA 10%, #00BC79 90%);-webkit-background-clip: text;color: transparent;" class=" font-sans font-bold">KviewUI</span>
             </h1>
             <h1 class="text-6xl font-bold mt-1">
               <span class="font-sans font-bold text-black/80 dark:text-white/80">多端业务开发利器</span>
@@ -43,10 +43,10 @@ console.log(features.value)
             </a>
           </div>
         </div>
-        <div class="mt-15 pl-10 lt-lg:px-3">
-          <div class="flex flex-wrap grid gap-5 box-border border-0px border-red-400">
+        <div class="mt-15 pl-10 lt-lg:px-3 flex flex-col !scrollbar !scrollbar-rounded !scrollbar-w-0px !scrollbar-thumb-color-transparent">
+          <div class="flex flex-wrap box-border border-0px border-red-400">
             <template v-for="(item, index) in features" :key="index">
-              <div class="w-1/4 lt-sm:w-full border-0px border-blue-300">
+              <div class="w-1/3 p-12px lt-sm:w-full border-0px border-blue-300">
                 <article class="p-24px rounded-12px bg-gray1 dark:bg-gray8 border-0px border-gray">
                   <div class="bg-gray2 dark:bg-gray9 p-10px w-45px h-45px inline-block rounded flex items-center justify-center">
                     {{ item.icon }}
@@ -65,4 +65,11 @@ console.log(features.value)
       </div>
     </div>
   </main>
+  <footer>
+    <div class="py-30px mt-30px w-full border-t dark:border-t-gray-700">
+      <div class="text-center text-gray-500">
+        本文档内容版权为 KviewUI 官方团队所有，保留所有权利。
+      </div>
+    </div>
+  </footer>
 </template>

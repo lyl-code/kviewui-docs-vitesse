@@ -61,12 +61,12 @@ const subscribe = store.$subscribe((mutation, state) => {
         <div
           class="dark:color-white color-black text-2xl !tracking-wider !font-sans opacity-80 dark:opacity-100 relative right-2 top-1 lt-md:!hidden"
         >
-          <span color-green-600>Kview</span>
+          <span color-green-600 dark:color-green-500>Kview</span>
           <span>UI</span>
         </div>
         <div class="lt-sm:!hidden">
           <span
-            class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-200 dark:text-green-900 !tracking-2px !font-serif"
+            class="bg-green-500 text-white text-sm font-semibold mr-2 px-1.5 py-0.5 rounded-full dark:bg-green-600 dark:text-gray-100 !tracking-2px !font-serif"
           >v1.0.0</span>
         </div>
       </RouterLink>

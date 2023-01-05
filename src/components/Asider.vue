@@ -51,7 +51,7 @@ watch(() => route.path, (newPath, oldPath) => {
       </ol>
     </template>
     <template v-if="pathname.includes('guide')">
-      <ul class="py-3">
+      <!-- <ul class="py-3">
         <li
           v-for="(childItem, childIndex) in menuList.guide" :key="childIndex"
           class="text-center px-5 rounded-full dark:opacity-80 my-2"
@@ -66,7 +66,41 @@ watch(() => route.path, (newPath, oldPath) => {
             </span>
           </RouterLink>
         </li>
-      </ul>
+      </ul> -->
+      <ol v-for="(item, index) in menuList.guide" :key="index" class="">
+        <li
+          v-if="item.link"
+          class="text-center px-5 rounded-full dark:opacity-80 my-2" :class="pathname === item.link ? ' bg-green1 dark:bg-green-900/50' : ''"
+        >
+          <RouterLink :to="item.link">
+            <span
+              class="font-bold text-sm opacity-80 dark:opacity-80"
+              :class="pathname === item.link ? '!text-green-500' : 'text-gray-800 dark:!text-white'"
+            >
+              {{ item.name }}
+            </span>
+          </RouterLink>
+        </li>
+        <span v-else class="font-bold dark:opacity-80 dark:color-white/80">
+          {{ item.name }}
+        </span>
+        <ul class="py-3">
+          <li
+            v-for="(childItem, childIndex) in item.children" :key="childIndex"
+            class="text-center px-5 rounded-full dark:opacity-80 my-2"
+            :class="pathname === childItem.link ? ' bg-green1 dark:bg-green-900/50' : ''"
+          >
+            <RouterLink v-if="childItem.show" :to="childItem.link">
+              <span
+                class="font-bold text-sm opacity-80 dark:opacity-80"
+                :class="pathname === childItem.link ? '!text-green-500' : 'text-gray-800 dark:!text-white'"
+              >
+                {{ childItem.name }}
+              </span>
+            </RouterLink>
+          </li>
+        </ul>
+      </ol>
     </template>
   </div>
 </template>

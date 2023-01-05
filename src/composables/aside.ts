@@ -373,6 +373,31 @@ export const menus = () => {
         link: '/guide/token',
         children: [],
       },
+      {
+        name: 'CSS全局样式库',
+        enName: 'css',
+        link: '',
+        children: [
+          {
+            name: '介绍',
+            enName: 'intro',
+            type: 'guide',
+            show: true,
+            describe: '由于业内CSS原子化的盛行，组件库参考tailwindcss的设计思路，并且结合UNIAPP NVUE的样式支持给大家提供了一套原子化的CSS样式库，助力各位开发者用户高效开发业务。',
+            author: 'kviewui@163.com',
+            link: '/guide/css/intro',
+          },
+          {
+            name: '溢出',
+            enName: 'overflow',
+            type: 'guide',
+            show: true,
+            describe: '',
+            author: 'kviewui@163.com',
+            link: '/guide/css/overflow',
+          },
+        ],
+      },
     ],
   }
 }
