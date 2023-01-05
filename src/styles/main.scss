@@ -8,8 +8,12 @@
 }
 
 a {
-  color: map-get($map: $code-colors, $key: green) !important;
+  color: map-get($map: $code-colors, $key: green);
   font-weight: 600 !important;
+}
+
+.arco-link {
+  color: map-get($map: $code-colors, $key: green);
 }
 
 html,

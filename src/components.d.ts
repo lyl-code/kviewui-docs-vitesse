@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     Asider: typeof import('./components/Asider.vue')['default']
     ChangeMode: typeof import('./components/ChangeMode.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
+    CssPrefix: typeof import('./components/docs/guide/CssPrefix.md')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Home: typeof import('./components/Home.md')['default']

@@ -70,7 +70,7 @@ watch(() => route.path, (newPath, oldPath) => {
       <ol v-for="(item, index) in menuList.guide" :key="index" class="">
         <li
           v-if="item.link"
-          class="text-center px-5 rounded-full dark:opacity-80 my-2" :class="pathname === item.link ? ' bg-green1 dark:bg-green-900/50' : ''"
+          class="text-center px-5 rounded-full dark:opacity-80 my-0" :class="pathname === item.link ? ' bg-green1 dark:bg-green-900/50' : ''"
         >
           <RouterLink :to="item.link">
             <span
