@@ -26,8 +26,8 @@
 | <a-link status="success" href="display">Display</a-link> | display | H5、小程序、app-vue、app-nvue
 | <a-link status="success" href="overflow">溢出</a-link> | overflow | H5、小程序、app-vue
 | <a-link status="success" href="position">定位</a-link> | position | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="inset">定位位置</a-link> | top \| right \| bottom \| left | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="zIndex">层级</a-link> | z-index | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="top-right-bottom-left">定位位置</a-link> | top \| right \| bottom \| left | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="z-index">层级</a-link> | z-index | H5、小程序、app-vue、app-nvue
 
 ### Flexbox And Grid
 | CSS分类 | CSS属性 | 平台差异说明
@@ -82,9 +82,8 @@
 | <a-link status="success" href="font-variantNumeric">Font Variant Numeric</a-link> | font-variant-numeric | H5、小程序、app-vue
 | <a-link status="success" href="letter-spacing">字母间距</a-link> | letter-spacing | H5、小程序、app-vue
 | <a-link status="success" href="line-height">行高</a-link> | line-height | H5、小程序、app-vue、app-nvue
-<!-- | <a-link status="success" href="placeholder-color">占位文本色</a-link> | color | H5、小程序、app-vue -->
 | <a-link status="success" href="text-align">文本对齐</a-link> | text-align | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="color">文本颜色</a-link> | color | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="text-color">文本颜色</a-link> | color | H5、小程序、app-vue、app-nvue
 | <a-link status="success" href="text-decoration">文本装饰</a-link> | text-decoration | H5、小程序、app-vue、app-nvue
 | <a-link status="success" href="text-transform">文本转换</a-link> | text-transform | H5、小程序、app-vue
 | <a-link status="success" href="text-overflow">文本溢出</a-link> | text-overflow | H5、小程序、app-vue、app-nvue
