@@ -4,8 +4,12 @@
 
 ### 介绍
 <a-typography-text>
-    由于业内CSS原子化的盛行，组件库参考 <a-link status="success" href="https://tailwindcss.com">tailwindcss</a-link> 的设计思路，并且结合 <a-link status="success" href="https://uniapp.dcloud.net.cn/tutorial/nvue-css.html">UNIAPP NVUE的样式支持</a-link> 给大家提供了一套原子化的CSS样式库，助力各位开发者用户高效开发业务。
+    由于业内CSS原子化的盛行，组件库参考 <a-link href="https://tailwindcss.com">tailwindcss</a-link> 的设计思路，并且结合 <a-link status="success" href="https://uniapp.dcloud.net.cn/tutorial/nvue-css.html">UNIAPP NVUE的样式支持</a-link> 给大家提供了一套原子化的CSS样式库，助力各位开发者用户高效开发业务。
 </a-typography-text>
+
+::: tip
++ 样式库语法基本是<a-link href="https://tailwindcss.com">tailwindcss</a-link>的语法，所以如果熟悉<a-link href="https://tailwindcss.com">tailwindcss</a-link>的话就能零学习成本上手
+:::
 
 ## CSS样式概览
 ::: warning 注意事项
@@ -18,7 +22,7 @@
 ### 布局
 | CSS分类 | CSS属性 | 平台差异说明
 | --- | --- | ---
-| <a-link status="success" href="boxSizing">Box Sizing</a-link> | box-sizing | H5、小程序、app-vue
+| <a-link status="success" href="box-sizing">Box Sizing</a-link> | box-sizing | H5、小程序、app-vue
 | <a-link status="success" href="display">Display</a-link> | display | H5、小程序、app-vue、app-nvue
 | <a-link status="success" href="overflow">溢出</a-link> | overflow | H5、小程序、app-vue
 | <a-link status="success" href="position">定位</a-link> | position | H5、小程序、app-vue、app-nvue
@@ -28,32 +32,28 @@
 ### Flexbox And Grid
 | CSS分类 | CSS属性 | 平台差异说明
 | --- | --- | ---
-| <a-link status="success" href="flexDirection">Flex方向</a-link> | flex-direction | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="flexWrap">Flex Wrap</a-link> | flex-wrap | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="flex-direction">Flex方向</a-link> | flex-direction | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="flex-wrap">Flex Wrap</a-link> | flex-wrap | H5、小程序、app-vue、app-nvue
 | <a-link status="success" href="flex">Flex</a-link> | flex | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="flexGrow">Flex Grow</a-link> | flex-grow | H5、小程序、app-vue
-| <a-link status="success" href="flexShrink">Flex Shrink</a-link> | flex-shrink | H5、小程序、app-vue
-| <a-link status="success" href="gridTemplateColumns">Grid Template Columns</a-link> | grid-template-columns | H5、小程序、app-vue
-| <a-link status="success" href="gridColumn">Grid Column</a-link> | grid-column | H5、小程序、app-vue
-| <a-link status="success" href="gridTemplateRows">Grid Template Rows</a-link> | grid-template-rows | H5、小程序、app-vue
-| <a-link status="success" href="gridRow">Grid Row</a-link> | grid-row | H5、小程序、app-vue
-| <a-link status="success" href="gridRowStart">Grid Row Start</a-link> | grid-row-start | H5、小程序、app-vue
-| <a-link status="success" href="gridRowEnd">Grid Row End</a-link> | grid-row-end | H5、小程序、app-vue
-| <a-link status="success" href="gridAutoFlow">Grid Auto Flow</a-link> | grid-auto-flow | H5、小程序、app-vue
-| <a-link status="success" href="gridAutoColumns">Grid Auto Columns</a-link> | grid-auto-columns | H5、小程序、app-vue
-| <a-link status="success" href="gridAutoRows">Grid Auto Rows</a-link> | grid-auto-rows | H5、小程序、app-vue
-| <a-link status="success" href="gap">Gap</a-link> | gap | H5、小程序、app-vue
-| <a-link status="success" href="columnGap">Column Gap</a-link> | column-gap | H5、小程序、app-vue
-| <a-link status="success" href="rowGap">Row Gap</a-link> | row-gap | H5、小程序、app-vue
-| <a-link status="success" href="justifyItems">Justify Items</a-link> | justify-items | H5、小程序、app-vue
-| <a-link status="success" href="justifyContent">Justify Content</a-link> | justify-content | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="alignItems">Align Items</a-link> | align-items | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="justifySelf">Justify Self</a-link> | justify-self | H5、小程序、app-vue
-| <a-link status="success" href="alignContent">Align Content</a-link> | align-content | H5、小程序、app-vue
-| <a-link status="success" href="alignSelf">Align Self</a-link> | align-self | H5、小程序、app-vue
-| <a-link status="success" href="placeContent">Place Content</a-link> | place-content | H5、小程序、app-vue
-| <a-link status="success" href="placeItems">Place Items</a-link> | place-items | H5、小程序、app-vue
-| <a-link status="success" href="placeSelf">Place Self</a-link> | place-self | H5、小程序、app-vue
+| <a-link status="success" href="flex-grow">Flex Grow</a-link> | flex-grow | H5、小程序、app-vue
+| <a-link status="success" href="flex-shrink">Flex Shrink</a-link> | flex-shrink | H5、小程序、app-vue
+| <a-link status="success" href="grid-template-columns">Grid Template Columns</a-link> | grid-template-columns | H5、小程序、app-vue
+| <a-link status="success" href="grid-column">Grid Column Start / End</a-link> | grid-column \| grid-column-start \| grid-column-end | H5、小程序、app-vue
+| <a-link status="success" href="grid-template-rows">Grid Template Rows</a-link> | grid-template-rows | H5、小程序、app-vue
+| <a-link status="success" href="grid-row">Grid Row Start / End</a-link> | grid-row \| grid-row-start \| grid-row-end | H5、小程序、app-vue
+| <a-link status="success" href="grid-auto-flow">Grid Auto Flow</a-link> | grid-auto-flow | H5、小程序、app-vue
+| <a-link status="success" href="grid-auto-columns">Grid Auto Columns</a-link> | grid-auto-columns | H5、小程序、app-vue
+| <a-link status="success" href="grid-auto-rows">Grid Auto Rows</a-link> | grid-auto-rows | H5、小程序、app-vue
+| <a-link status="success" href="gap">Gap</a-link> | gap \| column-gap \| row-gap | H5、小程序、app-vue
+| <a-link status="success" href="justify-content">Justify Content</a-link> | justify-content | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="justify-items">Justify Items</a-link> | justify-items | H5、小程序、app-vue
+| <a-link status="success" href="justify-self">Justify Self</a-link> | justify-self | H5、小程序、app-vue
+| <a-link status="success" href="align-content">Align Content</a-link> | align-content | H5、小程序、app-vue
+| <a-link status="success" href="align-items">Align Items</a-link> | align-items | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="align-self">Align Self</a-link> | align-self | H5、小程序、app-vue
+| <a-link status="success" href="place-content">Place Content</a-link> | place-content | H5、小程序、app-vue
+| <a-link status="success" href="place-items">Place Items</a-link> | place-items | H5、小程序、app-vue
+| <a-link status="success" href="place-self">Place Self</a-link> | place-self | H5、小程序、app-vue
 
 ### 间距
 | CSS分类 | CSS属性 | 平台差异说明
@@ -65,32 +65,32 @@
 | CSS分类 | CSS属性 | 平台差异说明
 | --- | --- | ---
 | <a-link status="success" href="width">宽度</a-link> | width | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="minWidth">最小宽度</a-link> | min-width | H5、小程序、app-vue
-| <a-link status="success" href="maxWidth">最大宽度</a-link> | max-width | H5、小程序、app-vue
+| <a-link status="success" href="min-width">最小宽度</a-link> | min-width | H5、小程序、app-vue
+| <a-link status="success" href="max-width">最大宽度</a-link> | max-width | H5、小程序、app-vue
 | <a-link status="success" href="height">高度</a-link> | height | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="minHeight">最小高度</a-link> | height | H5、小程序、app-vue
-| <a-link status="success" href="maxHeight">最大高度</a-link> | max-height | H5、小程序、app-vue
+| <a-link status="success" href="min-height">最小高度</a-link> | height | H5、小程序、app-vue
+| <a-link status="success" href="max-height">最大高度</a-link> | max-height | H5、小程序、app-vue
 
 ### 排版
 | CSS分类 | CSS属性 | 平台差异说明
 | --- | --- | ---
-| <a-link status="success" href="fontFamily">字体序列</a-link> | font-family | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="fontSize">字体大小</a-link> | font-size | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="fontSmoothing">字体平滑度</a-link> | font-smoothing | H5、小程序、app-vue
-| <a-link status="success" href="fontStyle">字体样式</a-link> | font-style | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="fontWeight">字体粗细</a-link> | font-weight | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="fontVariantNumeric">Font Variant Numeric</a-link> | font-variant-numeric | H5、小程序、app-vue
-| <a-link status="success" href="letterSpacing">字母间距</a-link> | letter-spacing | H5、小程序、app-vue
-| <a-link status="success" href="lineHeight">行高</a-link> | line-height | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="placeholderColor">占位文本色</a-link> | color | H5、小程序、app-vue
-| <a-link status="success" href="textAlign">文本对齐</a-link> | text-align | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="font-family">字体序列</a-link> | font-family | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="font-size">字体大小</a-link> | font-size | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="font-smoothing">字体平滑度</a-link> | font-smoothing | H5、小程序、app-vue
+| <a-link status="success" href="font-style">字体样式</a-link> | font-style | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="font-weight">字体粗细</a-link> | font-weight | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="font-variantNumeric">Font Variant Numeric</a-link> | font-variant-numeric | H5、小程序、app-vue
+| <a-link status="success" href="letter-spacing">字母间距</a-link> | letter-spacing | H5、小程序、app-vue
+| <a-link status="success" href="line-height">行高</a-link> | line-height | H5、小程序、app-vue、app-nvue
+<!-- | <a-link status="success" href="placeholder-color">占位文本色</a-link> | color | H5、小程序、app-vue -->
+| <a-link status="success" href="text-align">文本对齐</a-link> | text-align | H5、小程序、app-vue、app-nvue
 | <a-link status="success" href="color">文本颜色</a-link> | color | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="textDecoration">文本装饰</a-link> | text-decoration | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="textTransform">文本转换</a-link> | text-transform | H5、小程序、app-vue
-| <a-link status="success" href="textOverflow">文本溢出</a-link> | text-overflow | H5、小程序、app-vue、app-nvue
-| <a-link status="success" href="verticalAlign">垂直对齐</a-link> | vertical-align | H5、小程序、app-vue
-| <a-link status="success" href="whiteSpace">空格</a-link> | white-space | H5、小程序、app-vue
-| <a-link status="success" href="wordBreak">文本换行</a-link> | word-break | H5、小程序、app-vue
+| <a-link status="success" href="text-decoration">文本装饰</a-link> | text-decoration | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="text-transform">文本转换</a-link> | text-transform | H5、小程序、app-vue
+| <a-link status="success" href="text-overflow">文本溢出</a-link> | text-overflow | H5、小程序、app-vue、app-nvue
+| <a-link status="success" href="vertical-align">垂直对齐</a-link> | vertical-align | H5、小程序、app-vue
+| <a-link status="success" href="whitespace">空格</a-link> | white-space | H5、小程序、app-vue
+| <a-link status="success" href="word-break">文本换行</a-link> | word-break | H5、小程序、app-vue
 
 ### 背景
 | CSS分类 | CSS属性 | 平台差异说明
@@ -153,7 +153,13 @@
 | --- | --- | ---
 | <a-link status="success" href="blur">屏幕阅读器</a-link> | - | H5、小程序、app-vue
 
-
+### 致谢
+-   <a-link status="success" href="https://tailwindcss.cn">
+        <span class="text-lg font-bold">tailwindcss</span>
+    </a-link>
+-   <a-link status="success" href="https://uniapp.dcloud.net.cn">
+        <span class="text-lg font-bold">uni-app</span>
+    </a-link>
 
 
 

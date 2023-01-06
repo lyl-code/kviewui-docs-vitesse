@@ -1,3 +1,6 @@
+.prose {
+    max-width: auto !important;
+}
 .prose pre:not(.shiki) {
   padding: 0;
 }
@@ -13,7 +16,7 @@
 }
 
 .shiki-light {
-  background: #f8f8f8 !important;
+  background: rgba($color: #001A4D, $alpha: 1) !important;
 }
 .shiki-dark {
   background: #1a1a1a !important;
@@ -40,7 +43,7 @@ html:not(.dark) .shiki-dark {
 }
 
 .prose pre {
-  width: 100vw;
+  width: 100%;
 }
 
 h2 {
@@ -49,7 +52,7 @@ h2 {
 }
 
 html.dark {
-  * :not(.arco-link) {
+  * :not(.arco-link, .arco-link > span) {
     color: rgba($color: map-get($code-colors, light-gray), $alpha: .8);
   }
   h2 {
