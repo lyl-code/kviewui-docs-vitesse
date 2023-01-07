@@ -11,8 +11,8 @@
 
 ### 语法
 ::: tip
-+ 背景颜色已内置 <a-link>暗黑模式</a-link> 的支持
-+ 在背景色class后面紧跟 `dark` 即可实现 <a-link>暗黑模式</a-link>，示例如下：
++ 边框颜色已内置 <a-link>暗黑模式</a-link> 的支持
++ 在边框颜色class后面紧跟 `dark` 即可实现 <a-link>暗黑模式</a-link>，示例如下：
     ```html
         <view class="kui-border-primary dark"></view>
     ```
