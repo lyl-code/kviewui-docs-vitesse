@@ -53,7 +53,7 @@ const subscribe = store.$subscribe((mutation, state) => {
 
 <template>
   <nav
-    class="bg-white px-2 sm:px-4 py-2.5 dark:bg-black/1 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+    class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gradient-to-r from-blue800 via-indigo700 to-gray900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
   >
     <div class="flex justify-between items-center mx-10 lt-lg:mx-1">
       <RouterLink class="flex items-center hover:opacity-80" to="/" :title="t('button.home')">
