@@ -8,12 +8,12 @@
         "selector": "",
         "defaultValue": "Documentation"
       },
-      "lvl1": ".content h1",
-      "lvl2": ".content h2",
-      "lvl3": ".content h3",
-      "lvl4": ".content h4",
-      "lvl5": ".content h5",
-      "content": ".content p, .content li"
+      "lvl1": ".kviewui-doc h1",
+      "lvl2": ".kviewui-doc h2",
+      "lvl3": ".kivewui-doc h3",
+      "lvl4": ".kviewui-doc h4",
+      "lvl5": ".kviewui-doc h5",
+      "content": ".kviewui-doc p, .kviewui-doc li"
     },
     "selectors_exclude": [
       "aside",
