@@ -1,5 +1,5 @@
 {
-    "index_name": "kviewui-docs",
+    "index_name": "kviewui-docs-vitesse",
     "start_urls": ["https://cn.kviewui.com/"],
     "rateLimit": 8,
     "maxDepth": 10,
