@@ -10,6 +10,18 @@ on:
       - main
 
 jobs:
+  algolia: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get the content of algolia.json as config
+        id: algolia_config
+        run: echo "config=$(cat crawler.config.json | jq -r tostring)" >> $GITHUB_OUTPUT
+      - name: Push indices to Algolia
+        uses: signcl/docsearch-scraper-action@master
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_APP_KEY: ${{ secrets.ALGOLIA_APP_KEY }}
+          CONFIG: ${{ steps.algolia_config.outputs.config }}
   lint:
     runs-on: ubuntu-latest
     steps:
